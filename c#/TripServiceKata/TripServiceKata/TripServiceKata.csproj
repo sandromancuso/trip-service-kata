@@ -39,8 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exception\DependendClassCallDuringUnitTestException.cs" />
+    <Compile Include="Exception\UserNotLoggedInException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trip\Trip.cs" />
+    <Compile Include="Trip\TripDAO.cs" />
+    <Compile Include="Trip\TripService.cs" />
+    <Compile Include="User\User.cs" />
+    <Compile Include="User\UserSession.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
