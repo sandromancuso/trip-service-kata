@@ -15,11 +15,11 @@ Although this is a very small piece of code, it has a lot of the problems that w
 Details
 -------
 
-If you want to give it a go, the starting point is [TripServiceTest.java][3] and [TripService.java][4]. Try unit testing it following the rule above.
+If you want to give it a go, the starting point is [TripServiceTest.cs][3] and [TripService.cs][4]. Try unit testing it following the rule above.
 
-For future comparisions, when you are done, you can always check [TripService_Original.java][2]
+For future comparisions, when you are done, you can always check [TripService_Original.cs][2]
 
 [1]: http://craftedsw.blogspot.com/2011/07/testing-legacy-hard-wired-dependencies.html "Testing legacy code: Hard-wired dependencies blog post"
-[2]: https://github.com/sandromancuso/trip-service-kata/blob/master/java/trip-service-kata/src/main/java/org/craftedsw/tripservicekata/TripService_Original.java "TripService_Original.java"
-[3]: https://github.com/sandromancuso/trip-service-kata/blob/master/java/trip-service-kata/src/test/java/org/craftedsw/tripservicekata/TripServiceTest.java "TripServiceTest.java"
-[4]: https://github.com/sandromancuso/trip-service-kata/blob/master/java/trip-service-kata/src/main/java/org/craftedsw/tripservicekata/trip/TripService.java "TripService.java"
+[2]: https://github.com/alastairs/trip-service-kata/blob/csharp-version/c%23/TripServiceKata/TripService_Original.cs "TripService_Original.cs"
+[3]: https://github.com/alastairs/trip-service-kata/blob/csharp-version/c%23/TripServiceKata/TripServiceKata.Tests/TripServiceTest.cs "TripServiceTest.cs"
+[4]: https://github.com/alastairs/trip-service-kata/blob/csharp-version/c%23/TripServiceKata/TripServiceKata/Trip/TripService.cs "TripService.cs"
