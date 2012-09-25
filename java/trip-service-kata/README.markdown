@@ -15,7 +15,7 @@ Although this is a very small piece of code, it has a lot of the problems that w
 Details
 -------
 
-If you want to give it a go, the starting point is [TripServiceTest.java][3] and [TripSerivce.java][4]. Try unit testing it following the rule above.
+If you want to give it a go, the starting point is [TripServiceTest.java][3] and [TripService.java][4]. Try unit testing it following the rule above.
 
 For future comparisions, when you are done, you can always check [TripService_Original.java][2]
 
