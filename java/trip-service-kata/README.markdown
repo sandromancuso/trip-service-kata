@@ -1,7 +1,7 @@
 Testing legacy code: Hard-wired dependencies
 ============================================
 
-Code related to my [Testing legacy code: Hard-wired dependencies][1] blog post
+Code related to my [Testing legacy code: Hard-wired dependencies][1] blog post. Try not reading the blog post before doing the exercise yourself.
 
 What is it about?
 -----------------
@@ -15,9 +15,9 @@ Although this is a very small piece of code, it has a lot of the problems that w
 Details
 -------
 
-If you want to give it a go, the starting point is [TripService_Original.java][2]. Try unit testing it following the rule above.
+If you want to give it a go, the starting point is [TripServiceTest.java][3] and [TripSerivce.java][4]. Try unit testing it following the rule above.
 
-My solution was [TripServiceTest.java][3] and [TripSerivce.java][4]
+For future comparisions, when you are done, you can always check [TripService_Original.java][2]
 
 [1]: http://craftedsw.blogspot.com/2011/07/testing-legacy-hard-wired-dependencies.html "Testing legacy code: Hard-wired dependencies blog post"
 [2]: https://github.com/sandromancuso/trip-service-kata/blob/master/java/trip-service-kata/src/main/java/org/craftedsw/tripservicekata/TripService_Original.java "TripService_Original.java"
