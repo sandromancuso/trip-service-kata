@@ -1,3 +1,4 @@
+# Java Ignores
 /java/trip-service-kata/target
 /java/trip-service-kata/.classpath
 /java/trip-service-kata/.project
@@ -5,3 +6,11 @@
 /java/trip-service-kata/tomcat.*
 /java/trip-service-kata/.idea
 /java/trip-service-kata/*.iml
+
+# C# Ignores
+_ReSharper.*/
+[Bb]in
+[Oo]bj
+*.suo
+*.user
+_NCrunch_*/
