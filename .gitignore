@@ -14,3 +14,9 @@ _ReSharper.*/
 *.suo
 *.user
 _NCrunch_*/
+
+# Python Ignores
+*.pyc
+
+# Ignore Vim undo history
+*.un~
