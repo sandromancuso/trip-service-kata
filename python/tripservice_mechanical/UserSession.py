@@ -1,4 +1,3 @@
-
 from DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
 
 class UserSession:
@@ -9,7 +8,7 @@ class UserSession:
     return cls._instance
   
   @staticmethod
-  def getInstane():
+  def getInstance():
     return UserSession()  
 
   def isUserLoggedIn(self, user):
