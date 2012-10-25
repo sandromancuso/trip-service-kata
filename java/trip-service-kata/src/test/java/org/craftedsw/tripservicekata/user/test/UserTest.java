@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class UserTest {
 
-	private static final User BOB = new User();
+	private static final User BOB  = new User();
 	private static final User PAUL = new User();
 
 	@Test public void 

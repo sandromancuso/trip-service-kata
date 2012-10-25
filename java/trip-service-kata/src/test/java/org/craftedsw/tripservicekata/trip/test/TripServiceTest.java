@@ -28,8 +28,11 @@ public class TripServiceTest {
 	private static final User LOGGED_IN_USER = new User();
 	private static final Trip TO_LONDON = new Trip();
 	
-	@Mock private TripDAO tripDAO;
-	@InjectMocks private TripService realTripService = new TripService();
+	@Mock 
+	private TripDAO tripDAO;
+	
+	@InjectMocks 
+	private TripService realTripService = new TripService();
 	
 	@Test(expected = UserNotLoggedInException.class) public void 
 	should_throw_an_exception_when_user_is_not_logged_in() {
