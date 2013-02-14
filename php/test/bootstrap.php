@@ -15,13 +15,14 @@
 
 // Or, using an anonymous function as of PHP 5.3.0
 spl_autoload_register(function ($class) {
-    include_once __DIR__.'/../src/tripservicekata/trip/TripService.class.php';
-    include_once __DIR__.'/../src/tripservicekata/trip/TripDao.class.php';
-    include_once __DIR__.'/../src/tripservicekata/trip/Trip.class.php';
-    include_once __DIR__.'/../src/tripservicekata/exception/DependendClassCallDuringUnitTestException.class.php';
-    include_once __DIR__.'/../src/tripservicekata/exception/UserNotLoggedInException.class.php';
-    include_once __DIR__.'/../src/tripservicekata/user/UserSession.class.php';
-    include_once __DIR__.'/../src/tripservicekata/user/User.class.php';
+    $baseDir = __DIR__.'/../src/tripservicekata/';
+    include_once $baseDir.'trip/TripService.class.php';
+    include_once $baseDir.'trip/TripDao.class.php';
+    include_once $baseDir.'trip/Trip.class.php';
+    include_once $baseDir.'exception/DependendClassCallDuringUnitTestException.class.php';
+    include_once $baseDir.'exception/UserNotLoggedInException.class.php';
+    include_once $baseDir.'user/UserSession.class.php';
+    include_once $baseDir.'user/User.class.php';
 });
 
 ?>
