@@ -18,5 +18,8 @@ _NCrunch_*/
 # Python Ignores
 *.pyc
 
+#php netbeans
+php/nbproject/
+
 # Ignore Vim undo history
 *.un~
