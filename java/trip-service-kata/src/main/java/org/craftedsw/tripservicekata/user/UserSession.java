@@ -13,11 +13,6 @@ public class UserSession {
 		return userSession;
 	}
 
-	public boolean isUserLoggedIn(User user) {
-		throw new CollaboratorCallException(
-				"UserSession.isUserLoggedIn() should not be called in an unit test");
-	}
-
 	public User getLoggedUser() {
 		throw new CollaboratorCallException(
 				"UserSession.getLoggedUser() should not be called in an unit test");
