@@ -9,7 +9,7 @@ class User {
 	val friendList: mutable.MutableList[User] = mutable.MutableList()
 
 	def friends(): List[User] = {
-		friends toList
+		friendList toList
 	}
 
 	def addFriend(user: User) = {
