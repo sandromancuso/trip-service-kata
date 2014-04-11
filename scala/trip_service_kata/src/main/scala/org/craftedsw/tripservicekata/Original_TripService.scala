@@ -12,12 +12,12 @@ class Original_TripService {
 		val loggedInUser = UserSession getLoggedUser()
 		var isFriend = false
 		if (loggedInUser != null) {
-			for (friend <- user.friends()) {
+			breakable { for (friend <- user.friends()) {
 				if (friend == loggedInUser) {
 					isFriend = true
 					break
 				}
-			}
+			}}
 			if (isFriend) {
 				tripList = TripDAO.findTripsByUser(user)
 			}
