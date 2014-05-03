@@ -1,6 +1,13 @@
-<?php 
-class TripService {
+<?php
 
+namespace TripServiceKata\Trip;
+
+use User;
+use UserSession;
+use TripServiceKata\Exception\UserNotLoggedInException;
+
+class TripService
+{
     public function getTripsByUser(User $user) {
         $tripList = array();
         $loggedUser = UserSession::getInstance()->getLoggedUser();
@@ -21,4 +28,3 @@ class TripService {
         }
     }
 }
-?>
