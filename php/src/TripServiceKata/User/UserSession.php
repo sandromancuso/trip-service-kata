@@ -2,7 +2,7 @@
 
 namespace TripServiceKata\User;
 
-use TripServiceKata\Exception\DependendClassCallDuringUnitTestException;
+use TripServiceKata\Exception\DependentClassCalledDuringUnitTestException;
 
 class UserSession
 {
@@ -25,14 +25,14 @@ class UserSession
 
     public function isUserLoggedIn(User $user)
     {
-        throw new DependendClassCallDuringUnitTestException(
+        throw new DependentClassCalledDuringUnitTestException(
             'UserSession.isUserLoggedIn() should not be called in an unit test'
         );
     }
 
     public function getLoggedUser()
     {
-        throw new DependendClassCallDuringUnitTestException(
+        throw new DependentClassCalledDuringUnitTestException(
             'UserSession.getLoggedUser() should not be called in an unit test'
         );
     }
