@@ -23,7 +23,7 @@ If you want to visualize it from the browser you have to run PHPUnit with this p
 
     php bin/phpunit --coverage-html report/
 
-Then visulize
+Then visualize
 
     open report/index.html
 
