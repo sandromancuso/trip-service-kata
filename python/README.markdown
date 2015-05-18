@@ -23,4 +23,4 @@ For future comparisions, when you are done, you can always check [tripservice_or
 [1]: http://craftedsw.blogspot.com/2011/07/testing-legacy-hard-wired-dependencies.html "Testing legacy code: Hard-wired dependencies blog post"
 [2]: https://github.com/bricef/trip-service-kata/blob/master/python/tripservice.py "tripservice.py"
 [3]: https://github.com/bricef/trip-service-kata/blob/master/python/tripservice_mechanical "tripservice mechanical translation from original Java Code"
-[2]: https://github.com/bricef/trip-service-kata/blob/master/python/tripservice_original.py "tripservice_original.py"
+[4]: https://github.com/bricef/trip-service-kata/blob/master/python/tripservice_original.py "tripservice_original.py"
