@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		932E267C1B1CB8F100A94DFB /* TripServiceKata.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E267B1B1CB8F100A94DFB /* TripServiceKata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		932E26821B1CB8F100A94DFB /* TripServiceKata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932E26761B1CB8F100A94DFB /* TripServiceKata.framework */; };
+		932E26891B1CB8F100A94DFB /* TripServiceKataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26881B1CB8F100A94DFB /* TripServiceKataTests.m */; };
+		932E26951B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26931B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.h */; };
+		932E26961B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26941B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.m */; };
+		932E26991B1CBDF000A94DFB /* UserNotLoggedInException.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26971B1CBDF000A94DFB /* UserNotLoggedInException.h */; };
+		932E269A1B1CBDF000A94DFB /* UserNotLoggedInException.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26981B1CBDF000A94DFB /* UserNotLoggedInException.m */; };
+		932E269E1B1CBF0000A94DFB /* Trip.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E269C1B1CBF0000A94DFB /* Trip.h */; };
+		932E269F1B1CBF0000A94DFB /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E269D1B1CBF0000A94DFB /* Trip.m */; };
+		932E26A21B1CBF3900A94DFB /* TripDAO.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26A01B1CBF3900A94DFB /* TripDAO.h */; };
+		932E26A31B1CBF3900A94DFB /* TripDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26A11B1CBF3900A94DFB /* TripDAO.m */; };
+		932E26A71B1CBFC000A94DFB /* User.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26A51B1CBFC000A94DFB /* User.h */; };
+		932E26A81B1CBFC000A94DFB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26A61B1CBFC000A94DFB /* User.m */; };
+		932E26AB1B1CC4C100A94DFB /* UserSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26A91B1CC4C100A94DFB /* UserSession.h */; };
+		932E26AC1B1CC4C100A94DFB /* UserSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26AA1B1CC4C100A94DFB /* UserSession.m */; };
+		932E26AF1B1CC8D900A94DFB /* TripService.h in Headers */ = {isa = PBXBuildFile; fileRef = 932E26AD1B1CC8D900A94DFB /* TripService.h */; };
+		932E26B01B1CC8D900A94DFB /* TripService.m in Sources */ = {isa = PBXBuildFile; fileRef = 932E26AE1B1CC8D900A94DFB /* TripService.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		932E26831B1CB8F100A94DFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932E266D1B1CB8F100A94DFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 932E26751B1CB8F100A94DFB;
+			remoteInfo = TripServiceKata;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		932E26761B1CB8F100A94DFB /* TripServiceKata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripServiceKata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		932E267A1B1CB8F100A94DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		932E267B1B1CB8F100A94DFB /* TripServiceKata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripServiceKata.h; sourceTree = "<group>"; };
+		932E26811B1CB8F100A94DFB /* TripServiceKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripServiceKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		932E26871B1CB8F100A94DFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		932E26881B1CB8F100A94DFB /* TripServiceKataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TripServiceKataTests.m; sourceTree = "<group>"; };
+		932E26931B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DependendClassCallDuringUnitTestException.h; sourceTree = "<group>"; };
+		932E26941B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependendClassCallDuringUnitTestException.m; sourceTree = "<group>"; };
+		932E26971B1CBDF000A94DFB /* UserNotLoggedInException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNotLoggedInException.h; sourceTree = "<group>"; };
+		932E26981B1CBDF000A94DFB /* UserNotLoggedInException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNotLoggedInException.m; sourceTree = "<group>"; };
+		932E269C1B1CBF0000A94DFB /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		932E269D1B1CBF0000A94DFB /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		932E26A01B1CBF3900A94DFB /* TripDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDAO.h; sourceTree = "<group>"; };
+		932E26A11B1CBF3900A94DFB /* TripDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDAO.m; sourceTree = "<group>"; };
+		932E26A51B1CBFC000A94DFB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		932E26A61B1CBFC000A94DFB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		932E26A91B1CC4C100A94DFB /* UserSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSession.h; sourceTree = "<group>"; };
+		932E26AA1B1CC4C100A94DFB /* UserSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSession.m; sourceTree = "<group>"; };
+		932E26AD1B1CC8D900A94DFB /* TripService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripService.h; sourceTree = "<group>"; };
+		932E26AE1B1CC8D900A94DFB /* TripService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		932E26721B1CB8F100A94DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932E267E1B1CB8F100A94DFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E26821B1CB8F100A94DFB /* TripServiceKata.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		932E266C1B1CB8F100A94DFB = {
+			isa = PBXGroup;
+			children = (
+				932E26781B1CB8F100A94DFB /* TripServiceKata */,
+				932E26851B1CB8F100A94DFB /* TripServiceKataTests */,
+				932E26771B1CB8F100A94DFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		932E26771B1CB8F100A94DFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				932E26761B1CB8F100A94DFB /* TripServiceKata.framework */,
+				932E26811B1CB8F100A94DFB /* TripServiceKataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		932E26781B1CB8F100A94DFB /* TripServiceKata */ = {
+			isa = PBXGroup;
+			children = (
+				932E26A41B1CBFA900A94DFB /* User */,
+				932E269B1B1CBEE200A94DFB /* Trip */,
+				932E26921B1CB97700A94DFB /* Exception */,
+				932E267B1B1CB8F100A94DFB /* TripServiceKata.h */,
+				932E26791B1CB8F100A94DFB /* Supporting Files */,
+			);
+			path = TripServiceKata;
+			sourceTree = "<group>";
+		};
+		932E26791B1CB8F100A94DFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				932E267A1B1CB8F100A94DFB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		932E26851B1CB8F100A94DFB /* TripServiceKataTests */ = {
+			isa = PBXGroup;
+			children = (
+				932E26881B1CB8F100A94DFB /* TripServiceKataTests.m */,
+				932E26861B1CB8F100A94DFB /* Supporting Files */,
+			);
+			path = TripServiceKataTests;
+			sourceTree = "<group>";
+		};
+		932E26861B1CB8F100A94DFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				932E26871B1CB8F100A94DFB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		932E26921B1CB97700A94DFB /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				932E26931B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.h */,
+				932E26941B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.m */,
+				932E26971B1CBDF000A94DFB /* UserNotLoggedInException.h */,
+				932E26981B1CBDF000A94DFB /* UserNotLoggedInException.m */,
+			);
+			name = Exception;
+			sourceTree = "<group>";
+		};
+		932E269B1B1CBEE200A94DFB /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				932E269C1B1CBF0000A94DFB /* Trip.h */,
+				932E269D1B1CBF0000A94DFB /* Trip.m */,
+				932E26A01B1CBF3900A94DFB /* TripDAO.h */,
+				932E26A11B1CBF3900A94DFB /* TripDAO.m */,
+				932E26AD1B1CC8D900A94DFB /* TripService.h */,
+				932E26AE1B1CC8D900A94DFB /* TripService.m */,
+			);
+			name = Trip;
+			sourceTree = "<group>";
+		};
+		932E26A41B1CBFA900A94DFB /* User */ = {
+			isa = PBXGroup;
+			children = (
+				932E26A51B1CBFC000A94DFB /* User.h */,
+				932E26A61B1CBFC000A94DFB /* User.m */,
+				932E26A91B1CC4C100A94DFB /* UserSession.h */,
+				932E26AA1B1CC4C100A94DFB /* UserSession.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		932E26731B1CB8F100A94DFB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E26951B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.h in Headers */,
+				932E26A71B1CBFC000A94DFB /* User.h in Headers */,
+				932E267C1B1CB8F100A94DFB /* TripServiceKata.h in Headers */,
+				932E26AF1B1CC8D900A94DFB /* TripService.h in Headers */,
+				932E26991B1CBDF000A94DFB /* UserNotLoggedInException.h in Headers */,
+				932E269E1B1CBF0000A94DFB /* Trip.h in Headers */,
+				932E26A21B1CBF3900A94DFB /* TripDAO.h in Headers */,
+				932E26AB1B1CC4C100A94DFB /* UserSession.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		932E26751B1CB8F100A94DFB /* TripServiceKata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932E268C1B1CB8F100A94DFB /* Build configuration list for PBXNativeTarget "TripServiceKata" */;
+			buildPhases = (
+				932E26711B1CB8F100A94DFB /* Sources */,
+				932E26721B1CB8F100A94DFB /* Frameworks */,
+				932E26731B1CB8F100A94DFB /* Headers */,
+				932E26741B1CB8F100A94DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TripServiceKata;
+			productName = TripServiceKata;
+			productReference = 932E26761B1CB8F100A94DFB /* TripServiceKata.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		932E26801B1CB8F100A94DFB /* TripServiceKataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932E268F1B1CB8F100A94DFB /* Build configuration list for PBXNativeTarget "TripServiceKataTests" */;
+			buildPhases = (
+				932E267D1B1CB8F100A94DFB /* Sources */,
+				932E267E1B1CB8F100A94DFB /* Frameworks */,
+				932E267F1B1CB8F100A94DFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				932E26841B1CB8F100A94DFB /* PBXTargetDependency */,
+			);
+			name = TripServiceKataTests;
+			productName = TripServiceKataTests;
+			productReference = 932E26811B1CB8F100A94DFB /* TripServiceKataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		932E266D1B1CB8F100A94DFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Codurance;
+				TargetAttributes = {
+					932E26751B1CB8F100A94DFB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					932E26801B1CB8F100A94DFB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 932E26701B1CB8F100A94DFB /* Build configuration list for PBXProject "TripServiceKata" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 932E266C1B1CB8F100A94DFB;
+			productRefGroup = 932E26771B1CB8F100A94DFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				932E26751B1CB8F100A94DFB /* TripServiceKata */,
+				932E26801B1CB8F100A94DFB /* TripServiceKataTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		932E26741B1CB8F100A94DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932E267F1B1CB8F100A94DFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		932E26711B1CB8F100A94DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E26A81B1CBFC000A94DFB /* User.m in Sources */,
+				932E26AC1B1CC4C100A94DFB /* UserSession.m in Sources */,
+				932E26B01B1CC8D900A94DFB /* TripService.m in Sources */,
+				932E26961B1CB9AE00A94DFB /* DependendClassCallDuringUnitTestException.m in Sources */,
+				932E269A1B1CBDF000A94DFB /* UserNotLoggedInException.m in Sources */,
+				932E269F1B1CBF0000A94DFB /* Trip.m in Sources */,
+				932E26A31B1CBF3900A94DFB /* TripDAO.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932E267D1B1CB8F100A94DFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932E26891B1CB8F100A94DFB /* TripServiceKataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		932E26841B1CB8F100A94DFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 932E26751B1CB8F100A94DFB /* TripServiceKata */;
+			targetProxy = 932E26831B1CB8F100A94DFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		932E268A1B1CB8F100A94DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		932E268B1B1CB8F100A94DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		932E268D1B1CB8F100A94DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TripServiceKata/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		932E268E1B1CB8F100A94DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TripServiceKata/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		932E26901B1CB8F100A94DFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripServiceKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		932E26911B1CB8F100A94DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TripServiceKataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		932E26701B1CB8F100A94DFB /* Build configuration list for PBXProject "TripServiceKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932E268A1B1CB8F100A94DFB /* Debug */,
+				932E268B1B1CB8F100A94DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		932E268C1B1CB8F100A94DFB /* Build configuration list for PBXNativeTarget "TripServiceKata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932E268D1B1CB8F100A94DFB /* Debug */,
+				932E268E1B1CB8F100A94DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		932E268F1B1CB8F100A94DFB /* Build configuration list for PBXNativeTarget "TripServiceKataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932E26901B1CB8F100A94DFB /* Debug */,
+				932E26911B1CB8F100A94DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 932E266D1B1CB8F100A94DFB /* Project object */;
+}
