@@ -9,13 +9,13 @@
 - (NSArray*)GetTripsByUser:(User*)user
 {
     NSArray* tripList = [NSArray array];
-    User* loggedUser = [[UserSession sharedInstance] GetLoggedUser];
+    User* loggedUser = [[UserSession sharedInstance] getLoggedUser];
     
     BOOL isFriend = NO;
     
     if(loggedUser != nil)
     {
-        for (User* friend in [user GetFriends])
+        for (User* friend in [user getFriends])
         {
             if(friend == loggedUser)
             {
@@ -25,7 +25,7 @@
         }
         if(isFriend)
         {
-            tripList =[TripDAO FindTripsByUser:user];
+            tripList = [TripDAO findTripsByUser:user];
         }
         
         return tripList;

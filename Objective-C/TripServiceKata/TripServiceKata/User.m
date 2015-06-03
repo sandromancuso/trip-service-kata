@@ -1,7 +1,7 @@
 #import "User.h"
 
 @interface User()
-    @property (nonatomic, strong) NSMutableArray* trips;
+    @property (nonatomic, strong) NSMutableArray*userTrips;
     @property (nonatomic, strong) NSMutableArray* friends;
 @end
 
@@ -11,31 +11,31 @@
 {
     if([super init])
     {
-        self.trips = [NSMutableArray array];
+        self.userTrips = [NSMutableArray array];
         self.friends = [NSMutableArray array];
     }
     
     return self;
 }
 
--(NSArray*)GetFriends
+-(NSArray*)getFriends
 {
     return self.friends;
 }
 
--(void)AddFriend:(User*)user
+-(void)addFriend:(User*)user
 {
     [self.friends addObject:user];
 }
 
--(NSArray*)Trips
+-(NSArray*)trips
 {
-    return self.trips;
+    return self.userTrips;
 }
 
--(void)AddTrip:(Trip*)trip
+-(void)addTrip:(Trip*)trip
 {
-    [self.trips addObject:trip];
+    [self.userTrips addObject:trip];
 }
 
 @end

@@ -16,16 +16,16 @@
     return _sharedInstance;
 }
 
--(BOOL)IsUserLoggedIn:(User*)user
+-(BOOL)isUserLoggedIn:(User*)user
 {
     [DependendClassCallDuringUnitTestException raise:@"Unit Test Exception" format:@"UserSession.IsUserLoggedIn() should not be called in an unit test"];
     return nil;
 }
 
 
--(User*)GetLoggedUser
+-(User*)getLoggedUser
 {
-    [DependendClassCallDuringUnitTestException raise:@"Unit Test Exception" format:@"UserSession.GetLoggedUser() should not be called in an unit test"];
+    [DependendClassCallDuringUnitTestException raise:@"Unit Test Exception" format:@"UserSession.getLoggedUser() should not be called in an unit test"];
     
     return nil;
 }
