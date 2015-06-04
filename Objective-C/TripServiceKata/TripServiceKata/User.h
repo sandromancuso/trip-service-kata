@@ -3,10 +3,10 @@
 
 @interface User : NSObject
 
--(NSArray*)GetFriends;
--(void)AddFriend:(User*)user;
+-(NSArray*)getFriends;
+-(void)addFriend:(User*)user;
 
--(NSArray*)Trips;
--(void)AddTrip:(Trip*)trip;
+-(NSArray*)trips;
+-(void)addTrip:(Trip*)trip;
 
 @end

@@ -4,7 +4,7 @@
 
 
 + (UserSession*)sharedInstance;
--(BOOL)IsUserLoggedIn:(User*)user;
--(User*)GetLoggedUser;
+- (BOOL)isUserLoggedIn:(User*)user;
+- (User*)getLoggedUser;
 
 @end

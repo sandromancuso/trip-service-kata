@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TripService : NSObject
+@class User;
 
+@interface TripService : NSObject
+- (NSArray*)GetTripsByUser:(User*)user;
 @end

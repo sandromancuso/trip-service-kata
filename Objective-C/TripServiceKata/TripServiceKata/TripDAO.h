@@ -3,6 +3,6 @@
 
 @interface TripDAO : NSObject
 
-+(NSArray*)FindTripsByUser:(User*)user;
++(NSArray*)findTripsByUser:(User*)user;
 
 @end
