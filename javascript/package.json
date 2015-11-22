@@ -1,0 +1,26 @@
+{
+  "name": "trip-service-kata",
+  "version": "1.0.0",
+  "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandromancuso/trip-service-kata.git"
+  },
+  "keywords": [
+    "kata"
+  ],
+  "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/sandromancuso/trip-service-kata/issues"
+  },
+  "homepage": "https://github.com/sandromancuso/trip-service-kata",
+  "devDependencies": {
+    "babel-core": "^6.2.1",
+    "babel-preset-es2015": "^6.1.18",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  }
+}
