@@ -21,6 +21,9 @@ _NCrunch_*/
 #php netbeans
 php/nbproject/
 
+# JavaScript Ignores
+/javascript/node_modules
+
 # Ignore Vim undo history
 *.un~
 
