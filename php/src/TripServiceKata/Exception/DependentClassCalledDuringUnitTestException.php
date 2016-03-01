@@ -4,7 +4,7 @@ namespace TripServiceKata\Exception;
 
 use Exception;
 
-class DependendClassCallDuringUnitTestException extends Exception
+class DependentClassCalledDuringUnitTestException extends Exception
 {
 
 }
