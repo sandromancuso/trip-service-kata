@@ -16,14 +16,14 @@ Assuming you have a proper developer key set up, run SE38
 From the menus choose Program -> Execute -> Unit Tests (Ctrl+Shift+F10) 
 
 ## Requirements Specification
-  Imagine building a social networking website for travellers
-    - users need to be logged in to see the content
-    - users need to be a friend to see someone else's trips
+Imagine building a social networking website for travellers
+* users need to be logged in to see the content
+* users need to be a friend to see someone else's trips
 
-  You cannot change production code if not covered by tests
-    - basic refactorings are allowed, but only if needed to write tests
+You cannot change production code if not covered by tests
+* basic refactorings are allowed, but only if needed to write tests
 
-  Start testing from shortest to deepest branch
-  Start refactoring from deepest to shortest branch
+Start testing from shortest to deepest branch
+Start refactoring from deepest to shortest branch
 
-  Give it a go, the starting point is the LTC_TRIP_SERVICE_TEST class
+Give it a go, the starting point is the LTC_TRIP_SERVICE_TEST class
