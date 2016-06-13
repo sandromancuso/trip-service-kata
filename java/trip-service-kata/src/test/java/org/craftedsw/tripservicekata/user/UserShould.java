@@ -1,5 +1,5 @@
 package org.craftedsw.tripservicekata.user;
 
-public class UserTest {
+public class UserShould {
 
 }
