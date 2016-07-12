@@ -1,0 +1,2 @@
+class TripServiceTests
+end
