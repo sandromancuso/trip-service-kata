@@ -1,4 +1,4 @@
-require_relative '../../ruby/еxceptions/dependend_class_call_during_unit_test_exception'
+require_relative '../еxceptions/dependend_class_call_during_unit_test_exception'
 
 class TripDAO
     def self.find_trips_by_user(user)
