@@ -1,0 +1,3 @@
+class UserNotLoggedInException < StandardError
+
+end
