@@ -2,7 +2,7 @@
 
 namespace TripServiceKata\Trip;
 
-use User;
+use TripServiceKata\User\User;
 use TripServiceKata\Exception\DependentClassCalledDuringUnitTestException;
 
 class TripDAO
