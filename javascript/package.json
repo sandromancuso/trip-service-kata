@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
