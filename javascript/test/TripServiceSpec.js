@@ -1,5 +1,7 @@
-import assert from 'assert';
-import TripService from '../src/TripService';
+"use strict";
+
+let assert = require('assert');
+let TripService = require('../src/TripService');
 
 describe('TripService', () => {
 
