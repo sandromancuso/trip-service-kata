@@ -3,7 +3,7 @@ require_relative '../еxceptions/dependend_class_call_during_unit_test_exception
 class UserSession
     @@user_session = UserSession.new
 
-    def get_instance
+    def self.get_instance
         @@user_session
     end
 
