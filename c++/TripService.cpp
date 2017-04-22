@@ -1,6 +1,8 @@
 #include <list>
 #include "packages/TripServiceSupport.h"
 
+UserSession *UserSession::oneUserSession=0;
+
 std::list<Trip> TripService::GetTripsByUser( User user )
 {
     std::list<Trip> triplist ;

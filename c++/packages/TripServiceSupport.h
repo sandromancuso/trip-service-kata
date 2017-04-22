@@ -1,3 +1,6 @@
+#ifndef TRIP_SERVICE_SUPPORT
+#define TRIP_SERVICE_SUPPORT
+
 #include <list>
 
 class Trip
@@ -28,9 +31,6 @@ public:
   
 };
 
-  
-class UserSession;
-UserSession *oneUserSession=0;
 
 class UserSession
 {
@@ -51,6 +51,7 @@ public:
     }
     
 private:
+    static UserSession *oneUserSession;
     inline UserSession() {};
 };
 
@@ -63,3 +64,4 @@ public:
     }
 };
 
+#endif //TRIP_SERVICE_SUPPORT
