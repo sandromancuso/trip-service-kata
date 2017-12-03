@@ -15,8 +15,8 @@ func ==(lhs: User, rhs: User) -> Bool
 
 class User : Equatable
 {
-    fileprivate var userTrips:[Trip] = []
-    fileprivate var friends:[User] = []
+    private var userTrips:[Trip] = []
+    private var friends:[User] = []
     
     func getFriends() -> [User]
     {
