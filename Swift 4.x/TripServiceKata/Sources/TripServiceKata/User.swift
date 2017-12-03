@@ -15,15 +15,15 @@ func ==(lhs: User, rhs: User) -> Bool
 
 class User : Equatable
 {
-    private var userTrips:[Trip] = []
-    private var friends:[User] = []
+    fileprivate var userTrips:[Trip] = []
+    fileprivate var friends:[User] = []
     
     func getFriends() -> [User]
     {
         return self.friends
     }
     
-    func addFriend(friend:User)
+    func addFriend(_ friend:User)
     {
         self.friends.append(friend)
     }
@@ -33,7 +33,7 @@ class User : Equatable
         return self.userTrips
     }
     
-    func addTrip(trip:Trip)
+    func addTrip(_ trip:Trip)
     {
         self.userTrips.append(trip)
     }

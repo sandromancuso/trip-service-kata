@@ -10,9 +10,9 @@ import Foundation
 
 class TripDAO
 {
-    class func findTripsByUser(user:User) throws -> [Trip]?
+    class func findTripsByUser(_ user:User) throws -> [Trip]?
     {
-        throw UnitTestErrorType.DependendClassCallDuringUnitTest
+        throw UnitTestErrorType.dependendClassCallDuringUnitTest
     }
     
 }

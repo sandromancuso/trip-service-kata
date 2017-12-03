@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum UnitTestErrorType : ErrorType
+enum UnitTestErrorType : Error
 {
-    case DependendClassCallDuringUnitTest
+    case dependendClassCallDuringUnitTest
 }
 
-enum TripServiceErrorType : ErrorType
+enum TripServiceErrorType : Error
 {
-    case UserNotLoggedIn
+    case userNotLoggedIn
 }

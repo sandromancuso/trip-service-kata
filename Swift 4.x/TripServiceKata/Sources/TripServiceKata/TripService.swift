@@ -10,7 +10,7 @@ import Foundation
 
 class TripService
 {
-    func GetTripsByUser(user:User) throws -> [Trip]?
+    func GetTripsByUser(_ user:User) throws -> [Trip]?
     {
         var tripList:[Trip]? = nil
         let loggedUser = try! UserSession.sharedInstance.getLoggedUser()
@@ -30,7 +30,7 @@ class TripService
             return tripList
         }
         else {
-            throw TripServiceErrorType.UserNotLoggedIn
+            throw TripServiceErrorType.userNotLoggedIn
         }
     }
 }

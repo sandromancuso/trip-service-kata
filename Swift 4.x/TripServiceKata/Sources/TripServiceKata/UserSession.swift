@@ -12,13 +12,13 @@ class UserSession
 {
     static var sharedInstance:UserSession = UserSession()
     
-    func isUserLoggedIn(user:User) throws -> Bool
+    func isUserLoggedIn(_ user:User) throws -> Bool
     {
-        throw UnitTestErrorType.DependendClassCallDuringUnitTest
+        throw UnitTestErrorType.dependendClassCallDuringUnitTest
     }
     
     func getLoggedUser() throws -> User?
     {
-        throw UnitTestErrorType.DependendClassCallDuringUnitTest
+        throw UnitTestErrorType.dependendClassCallDuringUnitTest
     }
 }
