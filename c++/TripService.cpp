@@ -1,7 +1,9 @@
 #include <list>
 #include "packages/TripServiceSupport.h"
 
-std::list<Trip> TripService::GetTripsByUser( User user )
+UserSession *UserSession::oneUserSession=0;
+
+std::list<Trip> TripService::GetTripsByUser( User *user )
 {
     std::list<Trip> triplist ;
     User* loggedUser = UserSession::GetInstance()->GetLoggedUser();
@@ -9,7 +11,7 @@ std::list<Trip> TripService::GetTripsByUser( User user )
     if ( loggedUser )
     {
         std::list<User>::iterator i;
-        for( i = user.GetFriends().begin(); i != user.GetFriends().end(); ++i )
+        for( i = user->GetFriends().begin(); i != user->GetFriends().end(); ++i )
         {
             if ( *i == *loggedUser )
             {
