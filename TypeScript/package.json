@@ -1,0 +1,43 @@
+{
+  "name": "tripservicekata",
+  "version": "1.0.0",
+  "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "pretest": "npm run lint"
+  },
+  "author": "Daniel Perez <danipq26@gmail.com>",
+  "devDependencies": {
+    "@types/jest": "^21.1.6",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.2.2",
+    "tslint": "^5.9.1"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(js?|ts?)$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandromancuso/trip-service-kata.git"
+  },
+  "keywords": [
+    "kata"
+  ],
+  "bugs": {
+    "url": "https://github.com/sandromancuso/trip-service-kata/issues"
+  },
+  "homepage": "https://github.com/sandromancuso/trip-service-kata",
+  "dependencies": {
+    "typescript": "^2.6.1"
+  }
+}
