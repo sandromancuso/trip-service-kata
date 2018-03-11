@@ -1,2 +1,3 @@
-Here you will find this kata in complete ABAP OO Style
+Here you will find this kata in complete ABAP OO Style.
+
 Check it out with abapGit
