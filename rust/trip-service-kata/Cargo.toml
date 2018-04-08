@@ -1,0 +1,6 @@
+[package]
+name = "trip-service-kata"
+version = "0.1.0"
+authors = ["FaustXVI <xavier.detant@gmail.com>"]
+
+[dependencies]
