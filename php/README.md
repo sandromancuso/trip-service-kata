@@ -14,20 +14,13 @@ Next, to execute the unit tests you need run this from the *php* directory
 
 ## Coverage
 
-If your IDE doesn't handle it you can launch and visualize it from the command line. Given you are in  the *php* folder
-just run
+When running the tests a coverage report should be generated automatically in simple text format and html report.
 
-    php bin/phpunit --coverage-text
+If you want to visualize it from the browser you can open
 
-If you want to visualize it from the browser you have to run PHPUnit with this parameters
+    open coverage/report/index.html
 
-    php bin/phpunit --coverage-html report/
-
-Then visualize
-
-    open report/index.html
-
-in a browser
+in a browser after running the tests.
 
 Enjoy
 
