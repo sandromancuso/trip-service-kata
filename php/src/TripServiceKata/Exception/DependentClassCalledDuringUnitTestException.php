@@ -2,9 +2,9 @@
 
 namespace TripServiceKata\Exception;
 
-use Exception;
+use RuntimeException;
 
-class DependentClassCalledDuringUnitTestException extends Exception
+class DependentClassCalledDuringUnitTestException extends RuntimeException
 {
 
 }
