@@ -2,10 +2,10 @@
 
 namespace Test\TripServiceKata\Trip;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use TripServiceKata\Trip\TripService;
 
-class TripServiceTest extends PHPUnit_Framework_TestCase
+class TripServiceTest extends TestCase
 {
     /**
      * @var TripService
