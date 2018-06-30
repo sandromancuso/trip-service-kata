@@ -1,4 +1,4 @@
-from TripDOA import TripDAO
+from TripDAO import TripDAO
 from UserSession import UserSession
 from UserNotLoggedInException import UserNotLoggedInException
 
@@ -7,7 +7,7 @@ class TripService:
     logged_user = UserSession.getInstance().getLoggedUser()
     isFriend = False
     tripList = []
-    if loggeduser:
+    if logged_user:
       for friend in user.getFriends():
         if friend is logged_user:
           isFriend = True
