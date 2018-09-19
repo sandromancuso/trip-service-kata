@@ -22,10 +22,10 @@ class User:
     self.friends = []
   
   def addFriend(self, user):
-    self.friends.add(user)
+    self.friends.append(user)
   
   def addTrip(self, trip):
-    self.trips.add(trip)
+    self.trips.append(trip)
   
 #
 # Functions
