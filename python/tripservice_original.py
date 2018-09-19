@@ -27,6 +27,8 @@ class User:
   def addTrip(self, trip):
     self.trips.append(trip)
   
+  def getFriends(self):
+    return self.friends
 #
 # Functions
 #
