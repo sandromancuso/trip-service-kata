@@ -19,7 +19,7 @@ class Trip:
 class User:
   def __init__(self):
     self.trips = []
-    self.friend = []
+    self.friends = []
   
   def addFriend(self, user):
     self.friends.add(user)
