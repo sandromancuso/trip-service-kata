@@ -19,14 +19,16 @@ class Trip:
 class User:
   def __init__(self):
     self.trips = []
-    self.friend = []
+    self.friends = []
   
   def addFriend(self, user):
-    self.friends.add(user)
+    self.friends.append(user)
   
   def addTrip(self, trip):
-    self.trips.add(trip)
+    self.trips.append(trip)
   
+  def getFriends(self):
+    return self.friends
 #
 # Functions
 #
