@@ -15,9 +15,13 @@ std::list<Trip> TripService::findTripsByUser(User& user)
 }
 
 
+std::list<Trip> TripService::GetTripsByUser(User& user)
+{
+	return GetTripsByUser(user, getLoggedInUser());
+}
+
 std::list<Trip> TripService::GetTripsByUser(User& user, User* loggedUser)
 {
-
 	if (!loggedUser)
 	{
 		throw UserNotLoggedInException("UserNotLoggedInException");
