@@ -53,11 +53,11 @@ class TripService
 {
 public:
 	[[depricated]]
-	explicit TripService():tripDao_{TripDAO{}}
+	explicit TripService() :tripDao_{ std::make_unique<TripDAO>() }
 	{
 	}
 
-	explicit TripService(TripDAO& _tripDAO): tripDao_{_tripDAO} {  }
+	explicit TripService(std::unique_ptr<TripDAO> _tripDAO) : tripDao_{ std::move(_tripDAO) }{}
 
 	[[depricated]]
 	std::list<Trip> GetTripsByUser(User& user);
@@ -65,7 +65,7 @@ public:
 	std::list<Trip> GetTripsByUser(User& user, User* loggedUser);
 private:
 	std::list<Trip> findTripsByUser(User& user);
-	TripDAO& tripDao_;
+	std::unique_ptr<TripDAO> tripDao_;
 	User* getLoggedInUser();
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
