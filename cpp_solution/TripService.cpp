@@ -16,7 +16,7 @@ std::list<Trip> TripService::findTripsByUser(User& user)
 
 bool TripService::isUsersAreFriends(User& user, User& loggedUser)
 {
-	return (std::find(user.GetFriends().begin(), user.GetFriends().end(), loggedUser) != user.GetFriends().end());
+	return user.isUsersAreFriends(loggedUser);
 }
 
 std::list<Trip> TripService::GetTripsByUser(User& user)
