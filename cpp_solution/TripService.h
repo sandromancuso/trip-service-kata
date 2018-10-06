@@ -63,9 +63,8 @@ public:
 	std::list<Trip> GetTripsByUser(User& user);
 
 	std::list<Trip> GetTripsByUser(User& user, User* loggedUser = nullptr);
-protected:
-	virtual std::list<Trip> findTripsByUser(User& user);
 private:
+	std::list<Trip> findTripsByUser(User& user);
 	TripDAO& tripDao_;
 	User* getLoggedInUser();
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
