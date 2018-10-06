@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UT_and_refactoring_demo", "UT_and_refactoring_demo\UT_and_refactoring_demo.vcxproj", "{984DAEB4-490F-4B7B-BC80-BFBE618AE9EC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpp_solution", "cpp_solution\cpp_solution.vcxproj", "{984DAEB4-490F-4B7B-BC80-BFBE618AE9EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

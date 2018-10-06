@@ -42,9 +42,10 @@ public:
 class TripService
 {
 public:
-	
-	std::list<Trip> GetTripsByUser(User& user);
 
+	std::list<Trip> GetTripsByUser(User& user);
+protected:
+	virtual User* getLoggedInUser();
 };
 
 

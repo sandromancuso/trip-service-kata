@@ -25,6 +25,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <ProjectName>cpp_solution</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -54,7 +55,6 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets" Condition="Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" />
-    <Import Project="..\packages\googlemock.v140.windesktop.static.rt-dyn.symbols.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.symbols.targets" Condition="Exists('..\packages\googlemock.v140.windesktop.static.rt-dyn.symbols.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.symbols.targets')" />
     <Import Project="..\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.targets" Condition="Exists('..\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.targets')" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -72,7 +72,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>D:\source\UT_and_refactoring_demo\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\v140\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\v140\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>gmock.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -91,7 +91,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>D:\source\UT_and_refactoring_demo\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -109,7 +109,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalLibraryDirectories>D:\source\UT_and_refactoring_demo\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,7 +127,7 @@
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalLibraryDirectories>D:\source\UT_and_refactoring_demo\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\lib\$(PlatformName)\$(Configuration)\v140;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -135,7 +135,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0\build\native\Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.targets'))" />
-    <Error Condition="!Exists('..\packages\googlemock.v140.windesktop.static.rt-dyn.symbols.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.symbols.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\googlemock.v140.windesktop.static.rt-dyn.symbols.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.symbols.targets'))" />
     <Error Condition="!Exists('..\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\googlemock.v140.windesktop.static.rt-dyn.1.7.0.1\build\native\googlemock.v140.windesktop.static.rt-dyn.targets'))" />
   </Target>
 </Project>

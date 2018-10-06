@@ -4,10 +4,15 @@
 #include <list>
 
 
+User* TripService::getLoggedInUser()
+{
+	return UserSession::GetInstance()->GetLoggedUser();
+}
+
 std::list<Trip> TripService::GetTripsByUser(User& user)
 {
 	std::list<Trip> tripList;
-	User* loggedUser = UserSession::GetInstance()->GetLoggedUser();
+	User* loggedUser = getLoggedInUser();
 	bool isFriend = false;
 	if (loggedUser)
 	{
