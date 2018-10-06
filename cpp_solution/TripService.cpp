@@ -33,7 +33,7 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 		{
 			return findTripsByUser(user);
 		}
-		return std::list<Trip>{};
+		return NO_TRIPS;
 	}
 	else
 	{
