@@ -53,9 +53,7 @@ class TripService
 {
 public:
 	[[depricated]]
-	explicit TripService() :tripDao_{ std::make_unique<TripDAO>() }
-	{
-	}
+	explicit TripService() :tripDao_{ std::make_unique<TripDAO>() }{}
 
 	explicit TripService(std::unique_ptr<TripDAO> _tripDAO) : tripDao_{ std::move(_tripDAO) }{}
 

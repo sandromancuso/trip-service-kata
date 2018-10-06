@@ -3,8 +3,7 @@
 
 #include <list>
 
-std::list<Trip> TripService::findTripsByUser(User& user)
-{
+std::list<Trip> TripService::findTripsByUser(User& user){
 	return tripDao_->FindTripsBy(user);
 }
 
@@ -16,13 +15,11 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 
 std::list<Trip> TripService::GetTripsByUser(User& user, User* loggedUser)
 {
-	if (!loggedUser)
-	{
+	if (!loggedUser){
 		throw UserNotLoggedInException("UserNotLoggedInException");
 	}
 
-	if (user.isFriendWith(*loggedUser))
-	{
+	if (user.isFriendWith(*loggedUser)){
 		return findTripsByUser(user);
 	}
 
