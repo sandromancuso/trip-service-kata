@@ -62,7 +62,7 @@ public:
 	[[depricated]]
 	std::list<Trip> GetTripsByUser(User& user);
 
-	std::list<Trip> GetTripsByUser(User& user, User* loggedUser = nullptr);
+	std::list<Trip> GetTripsByUser(User& user, User* loggedUser);
 private:
 	std::list<Trip> findTripsByUser(User& user);
 	TripDAO& tripDao_;
