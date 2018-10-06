@@ -17,14 +17,13 @@ std::list<Trip> TripService::findTripsByUser(User& user)
 
 std::list<Trip> TripService::GetTripsByUser(User& user, User* loggedUser)
 {
-	User* loggedUserLocal = getLoggedInUser();
 
-	if (!loggedUserLocal)
+	if (!loggedUser)
 	{
 		throw UserNotLoggedInException("UserNotLoggedInException");
 	}
 
-	if (user.isFriendWith(*loggedUserLocal))
+	if (user.isFriendWith(*loggedUser))
 	{
 		return findTripsByUser(user);
 	}
