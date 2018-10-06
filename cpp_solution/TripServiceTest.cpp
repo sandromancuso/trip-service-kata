@@ -3,6 +3,11 @@
 
 struct TripServiceTestable : TripService
 {
+	explicit TripServiceTestable(const TripDAO& _tripDAO)
+		: TripService{_tripDAO}
+	{
+	}
+
 protected:
 	std::list<Trip> findTripsByUser(User& user) override
 	{
@@ -20,7 +25,7 @@ protected:
 		anyUser.AddTrip(Trip{});
 	}
 public:
-	TripServiceTestable tripService;
+	TripServiceTestable tripService{TripDAO{}};
 	
 	User anyUser{ 0 };
 	User otherUser{2};
