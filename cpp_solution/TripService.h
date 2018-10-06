@@ -26,7 +26,6 @@ class UserNotLoggedInException: public std::logic_error
 {
 public:
 	using std::logic_error::logic_error;
-//	UserNotLoggedInException:  logic_error("UserNotLoggedInException"){};
 
 };
 
