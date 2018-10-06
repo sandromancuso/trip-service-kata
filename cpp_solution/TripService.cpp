@@ -14,10 +14,6 @@ std::list<Trip> TripService::findTripsByUser(User& user)
 	return TripDAO::FindTripsByUser(user);
 }
 
-bool TripService::isUsersAreFriends(User& user, User& loggedUser)
-{
-	return user.isFriendWith(loggedUser);
-}
 
 std::list<Trip> TripService::GetTripsByUser(User& user)
 {
@@ -26,7 +22,7 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 	{
 		std::list<User>::iterator i;
 		bool isFriend = false;
-		isFriend = isUsersAreFriends(user, *loggedUser);
+		isFriend = user.isFriendWith(*loggedUser);
 		if (isFriend)
 		{
 			return findTripsByUser(user);
