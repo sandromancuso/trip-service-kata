@@ -15,14 +15,14 @@ public:
 
 struct TripServiceTest: ::testing::Test
 {
+	TripServiceTestable tripService;
 	
+	User user{ 0 };
 };
 
 TEST_F(TripServiceTest, should_throw_in_no_user_logged_in) 
 {
-	TripServiceTestable tripService;
 
-	User user{ 0 };
 
 	EXPECT_THROW(tripService.GetTripsByUser(user), UserNotLoggedInException);
 }
@@ -30,9 +30,6 @@ TEST_F(TripServiceTest, should_throw_in_no_user_logged_in)
 
 TEST_F(TripServiceTest, should_return_no_trip_if_users_are_not_friends)
 {
-	TripServiceTestable tripService;
-
-	User user{ 0 };
 	User loggedUser{1};
 	tripService.loggedInUser = &loggedUser;
 	EXPECT_EQ(0,tripService.GetTripsByUser(user).size());
