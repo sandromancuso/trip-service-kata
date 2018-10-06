@@ -47,6 +47,7 @@ protected:
 	virtual User* getLoggedInUser();
 	virtual std::list<Trip> findTripsByUser(User& user);
 private:
+	bool isUsersAreFriends(User& user, User& loggedUser);
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
 
