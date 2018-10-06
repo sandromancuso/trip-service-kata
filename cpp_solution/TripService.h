@@ -37,15 +37,28 @@ public:
 class TripDAO
 {
 public:
-	inline static std::list<Trip> FindTripsByUser(User& user)
+	static std::list<Trip> FindTripsByUser(User& user)
 	{
 		throw std::logic_error("TripDAO should not be invoked on an unit test.");
 	}
+
+	std::list<Trip> FindTripsBy(User& user)
+	{
+		return FindTripsByUser(user);
+	}
+
 };
 
 class TripService
 {
 public:
+
+	explicit TripService():tripDao_{TripDAO{}}
+	{
+	}
+
+	explicit TripService(TripDAO _tripDAO): tripDao_{_tripDAO} {  }
+
 [[deprecated]]
 	std::list<Trip> GetTripsByUser(User& user);
 
@@ -53,6 +66,7 @@ public:
 protected:
 	virtual std::list<Trip> findTripsByUser(User& user);
 private:
+	TripDAO tripDao_;
 	User* getLoggedInUser();
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
