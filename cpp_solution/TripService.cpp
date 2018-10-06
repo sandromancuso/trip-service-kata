@@ -21,14 +21,7 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 	{
 		std::list<User>::iterator i;
 		bool isFriend = false;
-		for (i = user.GetFriends().begin(); i != user.GetFriends().end(); ++i)
-		{
-			if (*i == *loggedUser)
-			{
-				isFriend = true;
-				break;
-			}
-		}
+		isFriend = (std::find(user.GetFriends().begin(), user.GetFriends().end(), *loggedUser) != user.GetFriends().end());
 		if (isFriend)
 		{
 			return findTripsByUser(user);
