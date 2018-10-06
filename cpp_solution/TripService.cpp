@@ -20,10 +20,7 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 	User* loggedUser = getLoggedInUser();
 	if (loggedUser)
 	{
-		std::list<User>::iterator i;
-		bool isFriend = false;
-		isFriend = user.isFriendWith(*loggedUser);
-		if (isFriend)
+		if (user.isFriendWith(*loggedUser))
 		{
 			return findTripsByUser(user);
 		}
