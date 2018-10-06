@@ -47,7 +47,7 @@ class TripService
 {
 public:
 
-	std::list<Trip> GetTripsByUser(User& user);
+	std::list<Trip> GetTripsByUser(User& user, User* loggedUser = nullptr);
 protected:
 	virtual User* getLoggedInUser();
 	virtual std::list<Trip> findTripsByUser(User& user);
