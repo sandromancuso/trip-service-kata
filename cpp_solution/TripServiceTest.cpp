@@ -3,7 +3,7 @@
 
 struct TripServiceTestable : TripService
 {
-	explicit TripServiceTestable(const TripDAO& _tripDAO)
+	explicit TripServiceTestable(TripDAO& _tripDAO)
 		: TripService{_tripDAO}
 	{
 	}
@@ -13,6 +13,11 @@ protected:
 	{
 		return user.Trips();
 	}
+};
+
+struct TripDAOMock: TripDAO
+{
+	MOCK_METHOD1(FindTripsBy, std::list<Trip> (User&));
 };
 
 struct TripServiceTest: ::testing::Test
@@ -25,7 +30,8 @@ protected:
 		anyUser.AddTrip(Trip{});
 	}
 public:
-	TripServiceTestable tripService{TripDAO{}};
+	TripDAOMock tripDAO{};
+	TripService tripService{tripDAO};
 	
 	User anyUser{ 0 };
 	User otherUser{2};
@@ -43,6 +49,8 @@ TEST_F(TripServiceTest, should_return_trips_if_user_are_friend_with_logged_in_us
 {
 	anyUser.AddFriend(loggedUser);
 
+	EXPECT_CALL(tripDAO, FindTripsBy(anyUser)).WillOnce(testing::Return(anyUser.Trips()));
+	
 	EXPECT_EQ(2, tripService.GetTripsByUser(anyUser, &loggedUser).size());
 }
 
