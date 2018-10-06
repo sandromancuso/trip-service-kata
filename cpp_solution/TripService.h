@@ -16,6 +16,11 @@ public:
 	inline void AddTrip(Trip trip) { trips.push_back(trip); }
 
 	inline bool operator==(const User& other) const  { return (other.id == id); }
+	bool isUsersAreFriends( User& loggedUser)
+	{
+		return (std::find(GetFriends().begin(), GetFriends().end(), loggedUser) != GetFriends().end());
+	}
+
 private:
 	int id;
 	std::list<Trip> trips;
