@@ -13,7 +13,12 @@ public:
 	User* loggedInUser = nullptr;
 };
 
-TEST(TripService, should_throw_in_no_user_logged_in) 
+struct TripServiceTest: ::testing::Test
+{
+	
+};
+
+TEST_F(TripServiceTest, should_throw_in_no_user_logged_in) 
 {
 	TripServiceTestable tripService;
 
@@ -23,7 +28,7 @@ TEST(TripService, should_throw_in_no_user_logged_in)
 }
 
 
-TEST(TripService, should_return_no_trip_if_users_are_not_friends)
+TEST_F(TripServiceTest, should_return_no_trip_if_users_are_not_friends)
 {
 	TripServiceTestable tripService;
 
