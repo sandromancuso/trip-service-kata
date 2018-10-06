@@ -11,7 +11,7 @@ User* TripService::getLoggedInUser()
 
 std::list<Trip> TripService::findTripsByUser(User& user)
 {
-	return TripDAO::FindTripsByUser(user);
+	return tripDao_.FindTripsByUser(user);
 }
 
 

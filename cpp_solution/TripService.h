@@ -52,7 +52,7 @@ public:
 class TripService
 {
 public:
-
+	[[deprecated]]
 	explicit TripService():tripDao_{TripDAO{}}
 	{
 	}
