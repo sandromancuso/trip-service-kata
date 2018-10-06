@@ -17,8 +17,13 @@ protected:
 		anyUser.AddTrip(Trip{});
 	}
 public:
-	TripDAOMock tripDAO{};
-	TripService tripService{tripDAO};
+
+	explicit TripServiceTest() :tripDAO(new TripDAOMock{}), tripService{std::unique_ptr<TripDAOMock>(tripDAO)}
+	{
+	}
+
+	TripDAOMock* tripDAO;
+	TripService tripService;
 	
 	User anyUser{ 0 };
 	User otherUser{2};
@@ -36,7 +41,7 @@ TEST_F(TripServiceTest, should_return_trips_if_user_are_friend_with_logged_in_us
 {
 	anyUser.AddFriend(loggedUser);
 
-	EXPECT_CALL(tripDAO, FindTripsBy(anyUser)).WillOnce(testing::Return(anyUser.Trips()));
+	EXPECT_CALL(*tripDAO, FindTripsBy(anyUser)).WillOnce(testing::Return(anyUser.Trips()));
 	
 	EXPECT_EQ(2, tripService.GetTripsByUser(anyUser, &loggedUser).size());
 }
