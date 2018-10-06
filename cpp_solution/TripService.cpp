@@ -16,12 +16,11 @@ std::list<Trip> TripService::findTripsByUser(User& user)
 
 std::list<Trip> TripService::GetTripsByUser(User& user)
 {
-	std::list<Trip> tripList;
 	User* loggedUser = getLoggedInUser();
-	bool isFriend = false;
 	if (loggedUser)
 	{
 		std::list<User>::iterator i;
+		bool isFriend = false;
 		for (i = user.GetFriends().begin(); i != user.GetFriends().end(); ++i)
 		{
 			if (*i == *loggedUser)
@@ -32,24 +31,12 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 		}
 		if (isFriend)
 		{
-			tripList = findTripsByUser(user);
+			return findTripsByUser(user);
 		}
-		return tripList;
+		return std::list<Trip>{};
 	}
 	else
 	{
 		throw UserNotLoggedInException("UserNotLoggedInException");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-//UserSession* UserSession::oneUserSession;
