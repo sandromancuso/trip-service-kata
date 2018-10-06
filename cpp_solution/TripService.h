@@ -46,12 +46,14 @@ public:
 class TripService
 {
 public:
+[[depricated]]
+	std::list<Trip> GetTripsByUser(User& user);
 
 	std::list<Trip> GetTripsByUser(User& user, User* loggedUser = nullptr);
 protected:
-	virtual User* getLoggedInUser();
 	virtual std::list<Trip> findTripsByUser(User& user);
 private:
+	User* getLoggedInUser();
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
 
