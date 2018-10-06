@@ -46,6 +46,7 @@ public:
 	std::list<Trip> GetTripsByUser(User& user);
 protected:
 	virtual User* getLoggedInUser();
+	virtual std::list<Trip> findTripsByUser(User& user);
 };
 
 

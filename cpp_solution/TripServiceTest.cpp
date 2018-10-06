@@ -4,6 +4,11 @@
 struct TripServiceTestable : TripService
 {
 protected:
+	std::list<Trip> findTripsByUser(User& user) override
+	{
+		return user.Trips();
+	}
+
 	User* getLoggedInUser() override
 	{
 		return loggedInUser;	
@@ -19,6 +24,7 @@ struct TripServiceTest: ::testing::Test
 	
 	User anyUser{ 0 };
 	User otherUser{2};
+	User loggedUser{ 1 };
 	User* GUEST_USER = nullptr;
 };
 
@@ -30,9 +36,8 @@ TEST_F(TripServiceTest, should_throw_in_no_user_logged_in)
 }
 
 
-TEST_F(TripServiceTest, should_return_no_trip_if_users_are_not_friends)
+TEST_F(TripServiceTest, should_return_no_trips_if_users_are_not_friends)
 {
-	User loggedUser{1};
 	tripService.loggedInUser = &loggedUser;
 	anyUser.AddFriend(otherUser);
 	anyUser.AddTrip(Trip{});
@@ -40,3 +45,17 @@ TEST_F(TripServiceTest, should_return_no_trip_if_users_are_not_friends)
 
 	EXPECT_EQ(0,tripService.GetTripsByUser(anyUser).size());
 }
+
+TEST_F(TripServiceTest, should_return_trips_if_user_are_friend_with_logged_in_user)
+{
+	tripService.loggedInUser = &loggedUser;
+	anyUser.AddFriend(loggedUser);
+	anyUser.AddFriend(otherUser);
+	anyUser.AddTrip(Trip{});
+	anyUser.AddTrip(Trip{});
+
+	EXPECT_EQ(2,tripService.GetTripsByUser(anyUser).size());
+}
+
+
+

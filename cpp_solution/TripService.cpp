@@ -9,6 +9,11 @@ User* TripService::getLoggedInUser()
 	return UserSession::GetInstance()->GetLoggedUser();
 }
 
+std::list<Trip> TripService::findTripsByUser(User& user)
+{
+	return TripDAO::FindTripsByUser(user);
+}
+
 std::list<Trip> TripService::GetTripsByUser(User& user)
 {
 	std::list<Trip> tripList;
@@ -27,7 +32,7 @@ std::list<Trip> TripService::GetTripsByUser(User& user)
 		}
 		if (isFriend)
 		{
-			tripList = TripDAO::FindTripsByUser(user);
+			tripList = findTripsByUser(user);
 		}
 		return tripList;
 	}
