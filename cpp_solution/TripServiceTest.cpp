@@ -36,6 +36,7 @@ public:
 	User* GUEST_USER = nullptr;
 };
 
+
 TEST_F(TripServiceTest, should_throw_in_no_user_logged_in) 
 {
 	tripService.loggedInUser = GUEST_USER;
@@ -58,6 +59,3 @@ TEST_F(TripServiceTest, should_return_trips_if_user_are_friend_with_logged_in_us
 
 	EXPECT_EQ(2,tripService.GetTripsByUser(anyUser).size());
 }
-
-
-
