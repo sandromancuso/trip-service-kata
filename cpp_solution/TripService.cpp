@@ -3,21 +3,15 @@
 
 #include <list>
 
-
-User* TripService::getLoggedInUser()
-{
-	return UserSession::GetInstance()->GetLoggedUser();
-}
-
 std::list<Trip> TripService::findTripsByUser(User& user)
 {
 	return tripDao_->FindTripsBy(user);
 }
 
-
 std::list<Trip> TripService::GetTripsByUser(User& user)
 {
-	return GetTripsByUser(user, getLoggedInUser());
+	const auto logged_user = UserSession::GetInstance()->GetLoggedUser();
+	return GetTripsByUser(user, logged_user);
 }
 
 std::list<Trip> TripService::GetTripsByUser(User& user, User* loggedUser)

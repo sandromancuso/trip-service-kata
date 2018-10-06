@@ -66,7 +66,6 @@ public:
 private:
 	std::list<Trip> findTripsByUser(User& user);
 	std::unique_ptr<TripDAO> tripDao_;
-	User* getLoggedInUser();
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
 
