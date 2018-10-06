@@ -1,19 +1,6 @@
 #include "pch.h"
 #include "TripService.h"
 
-struct TripServiceTestable : TripService
-{
-	explicit TripServiceTestable(TripDAO& _tripDAO)
-		: TripService{_tripDAO}
-	{
-	}
-
-protected:
-	std::list<Trip> findTripsByUser(User& user) override
-	{
-		return user.Trips();
-	}
-};
 
 struct TripDAOMock: TripDAO
 {
