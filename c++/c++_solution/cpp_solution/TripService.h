@@ -11,12 +11,12 @@ public:
 	inline User(int _id) :id(_id) {};
 
 	inline std::list<User>& GetFriends() { return friends; }
-	inline void AddFriend(User user) { friends.push_back(user); }
+	inline void AddFriend(const User& user) { friends.push_back(user); }
 	inline std::list<Trip>& Trips() { return trips; }
 	inline void AddTrip(Trip trip) { trips.push_back(trip); }
 
 	inline bool operator==(const User& other) const  { return (other.id == id); }
-	bool isFriendWith( User& loggedUser)
+	bool isFriendWith( const User& loggedUser)
 	{
 		return (std::find(GetFriends().begin(), GetFriends().end(), loggedUser) != GetFriends().end());
 	}
@@ -52,17 +52,17 @@ public:
 class TripService
 {
 public:
-	[[depricated]]
+	[[deprecated]]
 	explicit TripService() :tripDao_{ std::make_unique<TripDAO>() }{}
 
 	explicit TripService(std::unique_ptr<TripDAO> _tripDAO) : tripDao_{ std::move(_tripDAO) }{}
 
-	[[depricated]]
-	std::list<Trip> GetTripsByUser(User& user);
+	[[deprecated]]
+	std::list<Trip> GetTripsByUser(User& user) const;
 
-	std::list<Trip> GetTripsByUser(User& user, User* loggedUser);
+	std::list<Trip> GetTripsByUser(User& user, User* loggedUser) const;
 private:
-	std::list<Trip> findTripsByUser(User& user);
+	std::list<Trip> findTripsByUser(User& user) const;
 	std::unique_ptr<TripDAO> tripDao_;
 	const std::list<Trip> NO_TRIPS = std::list<Trip>{};
 };
