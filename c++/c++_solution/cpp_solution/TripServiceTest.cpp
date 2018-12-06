@@ -13,8 +13,8 @@ protected:
 	void SetUp() override
 	{
 		anyUser.AddFriend(otherUser);
-		anyUser.AddTrip(Trip{});
-		anyUser.AddTrip(Trip{});
+		anyUser.AddTrip(TRIP_TO_MOSCOW);
+		anyUser.AddTrip(TRIP_TO_NY);
 	}
 public:
 
@@ -29,10 +29,12 @@ public:
 	User otherUser{2};
 	User loggedUser{ 1 };
 	User* GUEST_USER = nullptr;
+	Trip TRIP_TO_MOSCOW{};
+	Trip TRIP_TO_NY = Trip{};
 };
 
 
-TEST_F(TripServiceTest, should_throw_in_no_user_logged_in) 
+TEST_F(TripServiceTest, should_throw_if_no_user_logged_in) 
 {
 	EXPECT_THROW(tripService.GetTripsByUser(anyUser, GUEST_USER), UserNotLoggedInException);
 }
