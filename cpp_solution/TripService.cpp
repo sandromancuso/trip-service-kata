@@ -2,19 +2,22 @@
 #include "TripService.h"
 
 #include <list>
-#include "packages/TripServiceSupport.h"
 
-UserSession *UserSession::oneUserSession=0;
 
-std::list<Trip> TripService::GetTripsByUser( User *user )
+User* TripService::getLoggedInUser()
 {
-    std::list<Trip> triplist ;
-    User* loggedUser = UserSession::GetInstance()->GetLoggedUser();
+	return UserSession::GetInstance()->GetLoggedUser();
+}
+
+std::list<Trip> TripService::GetTripsByUser(User& user)
+{
+	std::list<Trip> tripList;
+	User* loggedUser = getLoggedInUser();
 	bool isFriend = false;
 	if (loggedUser)
 	{
 		std::list<User>::iterator i;
-        for( i = user->GetFriends().begin(); i != user->GetFriends().end(); ++i )
+		for (i = user.GetFriends().begin(); i != user.GetFriends().end(); ++i)
 		{
 			if (*i == *loggedUser)
 			{
@@ -24,13 +27,13 @@ std::list<Trip> TripService::GetTripsByUser( User *user )
 		}
 		if (isFriend)
 		{
-            triplist = TripDAO::FindTripsByUser(user);
+			tripList = TripDAO::FindTripsByUser(user);
 		}
-        return triplist;
+		return tripList;
 	}
 	else
 	{
-        throw "UserNotLoggedInException";
+		throw UserNotLoggedInException("UserNotLoggedInException");
 	}
 }
 
