@@ -3,22 +3,23 @@ package trip
 import (
 	"github.com/pkg/errors"
 	"github.com/sandromancuso/trip-service-kata/go/user"
+	"github.com/sandromancuso/trip-service-kata/go/trip"
 )
 
 type Service struct {
-	tripDAO *Dao
+	tripDAO *trip.Dao
 }
 
 // New ...
-func NewTripService(tripDao *Dao) *Service {
+func NewTripService(tripDao *trip.Dao) *Service {
 	return &Service{
 		tripDAO: tripDao,
 	}
 }
 
-func (this *Service) getTripByUser(friend *user.User) ([]Trip, error) {
+func (this *Service) getTripByUser(friend *user.User) ([]trip.Trip, error) {
 
-	var trips []Trip
+	var trips []trip.Trip
 
 	friends, err := friend.Friends()
 	if err != nil {
