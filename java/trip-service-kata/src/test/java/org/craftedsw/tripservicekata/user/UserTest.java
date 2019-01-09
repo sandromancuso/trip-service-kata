@@ -3,27 +3,35 @@ package org.craftedsw.tripservicekata.user;
 import org.junit.Test;
 
 import static org.craftedsw.tripservicekata.trip.UserBuilder.aUser;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-public class UserTest {
+public class UserTest
+{
+    private static final User ALICE = new User();
     private static final User BOB = new User();
     private static final User EVE = new User();
 
     @Test
     public void shouldTellWhenUsersAreNotFriend()
     {
-        User alice = aUser().friendsWith(BOB)
-                            .build();
-        assertThat(alice.isFriendWith(EVE), is(false));
+        User alice = aUser().friendsWith(BOB).build();
+        assertFalse(alice.isFriendWith(EVE));
     }
 
     @Test
     public void shouldTellWhenUsersAreFriend()
     {
-        User alice = aUser().friendsWith(BOB, EVE)
-            .build();
-        assertThat(alice.isFriendWith(EVE), is(true));
+        User alice = aUser().friendsWith(BOB).build();
+        assertTrue(alice.isFriendWith(BOB));
     }
 
+    @Test
+    public void shallReturnListOfFriends()
+    {
+        User victor = aUser().friendsWith(ALICE, BOB, EVE).build();
+        assertEquals(victor.getFriends().size(), 3);
+
+    }
 }

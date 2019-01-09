@@ -4,7 +4,19 @@
 	<groupId>org.craftedsw</groupId>
 	<artifactId>trip-service-kata</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>trip-service-kata</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <name>trip-service-kata</name>
 
    <properties>
         <hamcrest.version>1.1</hamcrest.version>
