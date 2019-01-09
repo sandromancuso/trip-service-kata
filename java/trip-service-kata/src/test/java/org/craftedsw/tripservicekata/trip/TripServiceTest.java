@@ -19,22 +19,18 @@ public class TripServiceTest {
 	private static final User ANOTHER_USER = new User();
 	private static final Trip TO_BRITTANY = new Trip();
     private static final Trip TO_NORMANDY = new Trip();
-    private User loggedInUser;
     private TripService tripService;
 
     @Before
     public void initialize()
     {
-        loggedInUser = REGISTERED_USER;
         tripService = new TestableTripService();
     }
 
 	@Test(expected = UserNotLoggedInException.class)
 	public void shouldRaiseExceptionWhenUserNotLoggedIn()
 	{
-	    loggedInUser = GUEST;
-
-		tripService.getTripsByUser(UNUSED_USER);
+		tripService.getTripsByUser(UNUSED_USER, GUEST);
 	}
 
 	@Test
@@ -43,26 +39,21 @@ public class TripServiceTest {
 		User target = aUser().friendsWith(ANOTHER_USER)
                              .withTrips(TO_BRITTANY)
                              .build();
-		assert tripService.getTripsByUser(target).isEmpty();
+		assert tripService.getTripsByUser(target, REGISTERED_USER).isEmpty();
 	}
 
 	@Test
     public void shouldReturnFriendTripsWhenUsersAreFriends()
     {
-        User target = aUser().friendsWith(ANOTHER_USER, loggedInUser)
+        User target = aUser().friendsWith(ANOTHER_USER, REGISTERED_USER)
                              .withTrips(TO_BRITTANY, TO_NORMANDY)
                              .build();
-        assertThat(tripService.getTripsByUser(target).size(), is(2));
+        assertThat(tripService.getTripsByUser(target, REGISTERED_USER).size(), is(2));
     }
 
 
 	public class TestableTripService extends TripService
 	{
-		@Override
-		protected User getLoggedInUser()
-		{
-			return loggedInUser;
-		}
 
         @Override
         protected List<Trip> tripsBy(User user)
