@@ -8,7 +8,7 @@ public class TripDAOTest
 {
 
     @Test(expected = CollaboratorCallException.class)
-    public void shallThrowAnExceptionWhenRetrievingTrips()
+    public void shouldThrowAnExceptionWhenRetrievingTrips()
     {
         new TripDAO().tripsBy(new User());
     }

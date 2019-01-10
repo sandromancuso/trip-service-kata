@@ -38,7 +38,7 @@ public class TripServiceTest
     public void initialize()
     {
         when(tripDAO.tripsBy(any(User.class)))
-            .thenAnswer(u -> ((User) u.getArguments()[0]).trips());
+            .thenAnswer(invocation -> ((User) invocation.getArguments()[0]).trips());
     }
 
     @Test(expected = UserNotLoggedInException.class)

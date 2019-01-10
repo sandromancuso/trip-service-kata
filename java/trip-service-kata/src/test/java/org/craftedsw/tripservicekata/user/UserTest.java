@@ -28,7 +28,7 @@ public class UserTest
     }
 
     @Test
-    public void shallReturnListOfFriends()
+    public void shouldReturnListOfFriends()
     {
         User victor = aUser().friendsWith(ALICE, BOB, EVE).build();
         assertEquals(victor.getFriends().size(), 3);
