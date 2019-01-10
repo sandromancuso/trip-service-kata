@@ -3,7 +3,8 @@ package org.craftedsw.tripservicekata.trip.test;
 import static org.craftedsw.tripservicekata.user.test.UserBuilder.aUser;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.BDDMockito.given;
+import static org.mockito.Matchers.any;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.craftedsw.tripservicekata.trip.Trip;
 import org.craftedsw.tripservicekata.trip.TripDAO;
 import org.craftedsw.tripservicekata.trip.TripService;
 import org.craftedsw.tripservicekata.user.User;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -38,7 +40,14 @@ public class TripServiceTest {
 	should_throw_an_exception_when_user_is_not_logged_in() {
 		 realTripService.getTripsByUser(UNUSED_USER, GUEST);
 	}
-	
+
+	@Before
+	public void initialize()
+	{
+		when(tripDAO.tripsBy(any(User.class)))
+			.thenAnswer( invocation -> ((User) invocation.getArguments()[0]).trips());
+	}
+
 	@Test public void 
 	should_not_return_any_trips_when_users_are_not_friends() {
 		User friend = aUser()
@@ -57,8 +66,7 @@ public class TripServiceTest {
 							.friendsWith(ANOTHER_USER, LOGGED_IN_USER)
 							.withTrips(TO_BRAZIL, TO_LONDON)
 							.build();
-		given(tripDAO.tripsBy(friend)).willReturn(friend.trips());
-		
+
 		List<Trip> friendTrips = realTripService.getTripsByUser(friend, LOGGED_IN_USER);
 		
 		assertThat(friendTrips.size(), is(2));
