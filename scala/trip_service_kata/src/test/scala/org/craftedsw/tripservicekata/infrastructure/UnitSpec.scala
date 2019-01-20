@@ -1,7 +1,7 @@
 package org.craftedsw.tripservicekata.infrastructure
 
 import org.scalatest._
-import org.scalatest.mock.MockitoSugar
+import org.scalatest.mockito.MockitoSugar
 
 abstract class UnitSpec extends FlatSpec
 							with Matchers
