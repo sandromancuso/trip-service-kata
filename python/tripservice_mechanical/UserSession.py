@@ -1,15 +1,15 @@
 from DependendClassCallDuringUnitTestException import DependendClassCallDuringUnitTestException
 
 class UserSession:
-  _instance = None
-  def __new__(cls, *args, **kwargs):
-    if not cls._instance:
-      cls._instance = super(Singleton, cls).__new__(cls, *args, **kwargs)
+
+  def __new__(cls):
+    if not hasattr(cls, '_instance'):
+      cls._instance = super(UserSession, cls).__new__(cls)
     return cls._instance
   
   @staticmethod
   def getInstance():
-    return UserSession()  
+    return UserSession()
 
   def isUserLoggedIn(self, user):
     raise DependendClassCallDuringUnitTestException(
