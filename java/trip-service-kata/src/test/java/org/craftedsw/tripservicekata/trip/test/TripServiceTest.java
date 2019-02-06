@@ -45,7 +45,8 @@ public class TripServiceTest {
 							.friendsWith(ANOTHER_USER)
 							.withTrips(TO_BRAZIL)
 							.build();
-		
+		given(tripDAO.tripsBy(friend)).willReturn(friend.trips());
+
 		List<Trip> friendTrips = realTripService.getTripsByUser(friend, LOGGED_IN_USER);
 		 
 		assertThat(friendTrips.size(), is(0));
