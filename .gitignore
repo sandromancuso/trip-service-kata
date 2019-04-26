@@ -6,6 +6,7 @@
 /java/trip-service-kata/tomcat.*
 /java/trip-service-kata/.idea
 /java/trip-service-kata/*.iml
+!/java/trip-service-kata/.mvn/wrapper/maven-wrapper.jar
 
 # C# Ignores
 _ReSharper.*/
