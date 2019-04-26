@@ -6,10 +6,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>trip-service-kata</name>
 
-   <properties>
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
+        <assertj.version>3.12.2</assertj.version>
         <hamcrest.version>1.3</hamcrest.version>
         <junit.version>5.4.2</junit.version>
         <mockito.version>2.27.0</mockito.version>
@@ -45,6 +46,12 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>${mockito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
         
