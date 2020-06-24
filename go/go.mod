@@ -1,3 +1,5 @@
-module trip-service-kata/go
+module github.com/sandromancuso/trip-service-kata/go
 
-require github.com/pkg/errors v0.8.1
+go 1.14
+
+require github.com/pkg/errors v0.9.1
