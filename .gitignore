@@ -24,6 +24,11 @@ php/nbproject/
 # JavaScript Ignores
 /javascript/node_modules
 
+# Go Ignores
+*.exe
+.vscode
+vendor/
+
 # Ignore Vim undo history
 *.un~
 
