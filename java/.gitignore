@@ -1,0 +1,14 @@
+target
+
+# Eclipse
+.classpath
+.project
+.settings
+tomcat.*
+
+# IntelliJ IDEA
+.idea/
+.idea_modules
+out/
+*.iml
+**/.idea
