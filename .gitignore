@@ -6,9 +6,6 @@ _ReSharper.*/
 *.user
 _NCrunch_*/
 
-# Python Ignores
-*.pyc
-
 #php netbeans
 php/nbproject/
 
