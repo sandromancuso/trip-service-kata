@@ -1,4 +1,2 @@
-
 class UserNotLoggedInException(Exception):
-  pass
-
+    pass

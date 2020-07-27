@@ -1,3 +1,2 @@
-
-class Trip:
-  pass
+class Trip(object):
+    pass

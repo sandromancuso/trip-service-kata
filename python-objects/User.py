@@ -1,21 +1,16 @@
+class User(object):
+    def __init__(self):
+        self._trips = []
+        self._friends = []
 
-from Trip import Trip;
+    def get_friends(self):
+        return self._friends
 
-class User:
-  
-  def __init__(self):
-    self.trips = []
-    self.friend = []
-  
-  def getFriends(self):
-    return self.friends
-  
-  def addFriend(self, user):
-    self.friends.add(user)
+    def add_friend(self, user):
+        self._friends.append(user)
 
-  def addTrip(self, trip):
-    self.trips.add(trip)
-  
-  def trips(self):
-    return self.trips
+    def add_trip(self, trip):
+        self._trips.append(trip)
 
+    def trips(self):
+        return self._trips
