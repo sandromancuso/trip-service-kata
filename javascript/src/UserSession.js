@@ -7,4 +7,4 @@ class UserSession {
 
 }
 
-module.exports = new UserSession();
+export default new UserSession();

@@ -12,6 +12,7 @@
   "keywords": [
     "kata"
   ],
+  "type": "module",
   "author": "Christoph Neuroth <christoph.neuroth@gmail.com>",
   "bugs": {
     "url": "https://github.com/sandromancuso/trip-service-kata/issues"

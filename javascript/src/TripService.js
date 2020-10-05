@@ -1,7 +1,7 @@
 "use strict";
 
-let UserSession = require('./UserSession');
-let TripDAO = require('./TripDAO');
+import UserSession from "./UserSession.js";
+import TripDAO from "./TripDAO.js";
 
 class TripService {
     getTripsByUser(user) {
@@ -27,4 +27,4 @@ class TripService {
     }
 }
 
-module.exports = TripService
+export default TripService;
