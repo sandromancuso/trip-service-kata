@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Trip.fs" />
+        <Compile Include="User.fs" />
+        <Compile Include="UserSession.fs" />
+        <Compile Include="TripServiceDAO.fs" />
+        <Compile Include="TripService.fs" />
+    </ItemGroup>
+
+</Project>
