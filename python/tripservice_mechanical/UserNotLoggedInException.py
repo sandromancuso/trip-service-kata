@@ -1,4 +1,0 @@
-
-class UserNotLoggedInException(Exception):
-  pass
-

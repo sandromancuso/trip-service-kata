@@ -1,0 +1,2 @@
+class DependendClassCallDuringUnitTestException(Exception):
+    pass
