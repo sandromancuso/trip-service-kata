@@ -38,10 +38,10 @@ public class TripServiceTest {
 
     @Test
     public void should_return_trip_list_when_user_is_a_friend() {
-        final User friend = new User();
-        friend.addFriend(loggedInUser);
-        friend.addTrip(TO_BRAZIL);
-        friend.addTrip(TO_LONDON);
+        User friend = UserBuilder.aUser()
+                .friendsWith(ANOTHER_USER, loggedInUser)
+                .withTrips(TO_BRAZIL, TO_LONDON)
+                .build();
 
         final List<Trip> trips = tripService.getTripsByUser(friend);
 
@@ -49,13 +49,12 @@ public class TripServiceTest {
         assertThat(trips, contains(TO_BRAZIL, TO_LONDON));
     }
 
-
     @Test
     public void should_return_empty_list_when_user_in_not_friend() {
-        final User friend = new User();
-
-        friend.addFriend(ANOTHER_USER);
-        friend.addTrip(TO_BRAZIL);
+        final User friend = UserBuilder.aUser()
+                .friendsWith(ANOTHER_USER)
+                .withTrips(TO_BRAZIL)
+                .build();
 
         final List<Trip> trips = tripService.getTripsByUser(friend);
 
