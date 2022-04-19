@@ -45,10 +45,11 @@ public class TripDAOTest {
     @Test
     void WHEN_UserIsFriend_THEN_ReturnTripList() {
         // Arrange
-        IsFriendTripService isFriendTripService = new IsFriendTripService();
+        TripService tripService = new TripService();
         theOtherUser.addFriend(loggedUser);
+        loggedUser.setTripDAO(new IsFriendTripDAO());
         // Act
-        List<Trip> actual = isFriendTripService.getTripsByUser(loggedUser, theOtherUser);
+        List<Trip> actual = tripService.getTripsByUser(loggedUser, theOtherUser);
         // Assert
         ArrayList<Trip> expect = new ArrayList<>();
         expect.add(new Trip());
@@ -56,13 +57,12 @@ public class TripDAOTest {
 
     }
 
-    private class IsFriendTripService extends TripService{
+    class IsFriendTripDAO extends TripDAO{
         @Override
-        public List<Trip> findTripsByUser(User user) {
+        public List<Trip> findTripsByUserNoneStatic(User user) {
             ArrayList<Trip> trips = new ArrayList<>();
             trips.add(new Trip());
             return trips;
         }
     }
-
 }
