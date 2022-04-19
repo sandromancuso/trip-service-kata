@@ -23,37 +23,23 @@ public class TripDAOTest {
     @Test
     void WHEN_UserIsNotLogin_THEN_ThrowUserNotLoggedInException(){
         // Arrange
-        TripService noLoginTripService = new NoLoginTripService();
+        TripService tripService = new TripService();
         // Act & Assert
         Assertions.assertThrows(
                 UserNotLoggedInException.class,
-                () -> noLoginTripService.getTripsByUser(null)
+                () -> tripService.getTripsByUser(null, null)
         );
-    }
-
-    private class NoLoginTripService extends TripService{
-        @Override
-        public User getLoggedUser() {
-            return null;
-        }
     }
 
     @Test
     void WHEN_UserIsNotFriend_THEN_ReturnEmptyList(){
         // Arrange
-        TripService noLoginTripService = new NotFriendTripService();
+        TripService tripService = new TripService();
         // Act
-        List<Trip> actual = noLoginTripService.getTripsByUser(theOtherUser);
+        List<Trip> actual = tripService.getTripsByUser(loggedUser, theOtherUser);
         // Assert
         ArrayList<Trip> expect = new ArrayList<>();
         Assertions.assertArrayEquals(expect.toArray(), actual.toArray());
-    }
-
-    private class NotFriendTripService extends TripService{
-        @Override
-        public User getLoggedUser() {
-            return loggedUser;
-        }
     }
 
     @Test
@@ -62,7 +48,7 @@ public class TripDAOTest {
         IsFriendTripService isFriendTripService = new IsFriendTripService();
         theOtherUser.addFriend(loggedUser);
         // Act
-        List<Trip> actual = isFriendTripService.getTripsByUser(theOtherUser);
+        List<Trip> actual = isFriendTripService.getTripsByUser(loggedUser, theOtherUser);
         // Assert
         ArrayList<Trip> expect = new ArrayList<>();
         expect.add(new Trip());
@@ -71,11 +57,6 @@ public class TripDAOTest {
     }
 
     private class IsFriendTripService extends TripService{
-        @Override
-        public User getLoggedUser() {
-            return loggedUser;
-        }
-
         @Override
         public List<Trip> findTripsByUser(User user) {
             ArrayList<Trip> trips = new ArrayList<>();
