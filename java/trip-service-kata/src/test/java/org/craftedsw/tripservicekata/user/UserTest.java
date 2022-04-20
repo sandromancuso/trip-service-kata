@@ -18,4 +18,14 @@ public class UserTest {
     
     assertThat(user.isFriendsWith(PAUL)).isEqualTo(false);
   }
+  
+  @Test
+  @DisplayName("告知該使用者是朋友")
+  void should_inform_when_users_are_friends() throws Exception {
+    User user = new User();
+    user.addFriend(BOB);
+    user.addFriend(PAUL);
+    
+    assertThat(user.isFriendsWith(PAUL)).isEqualTo(true);    
+  }
 }
