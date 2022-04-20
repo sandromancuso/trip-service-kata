@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 import org.craftedsw.tripservicekata.exception.UserNotLoggedInException;
 import org.craftedsw.tripservicekata.user.User;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -20,12 +21,19 @@ public class TripServiceTest {
   private static final Trip TO_USA = new Trip();
   private static final Trip TO_TAIWAN = new Trip();
   private User loggedUser;
+  
+  private TripService tripService;
 
+  @BeforeEach
+  void beforeEach() {
+    tripService = new TestableTripService();
+    loggedUser = REGISTERED_USER;
+    
+  }
+  
   @Test
   @DisplayName("使用者未登入丟出例外")
   void should_throw_exception_when_user_is_not_logged_in() throws Exception {
-    // arrange
-    TripService tripService = new TestableTripService();
     
     loggedUser = GUEST;
     
@@ -40,9 +48,6 @@ public class TripServiceTest {
   @DisplayName("如果不是朋友，就看不到其旅遊行程")
   void should_not_return_trips_when_users_not_friends() throws Exception {
     // arrange
-    TripService tripService = new TestableTripService();
-    
-    loggedUser = REGISTERED_USER;
     User friend = new User();
     friend.addFriend(ANOTHER_USER);
     friend.addTrip(TO_USA);
@@ -57,9 +62,6 @@ public class TripServiceTest {
   @DisplayName("如果是朋友，就可看其旅遊行程")
   void return_trips_when_users_are_friends() throws Exception {
     // arrange
-    TripService tripService = new TestableTripService();
-    
-    loggedUser = REGISTERED_USER;
     User friend = new User();
     friend.addFriend(ANOTHER_USER);
     friend.addFriend(loggedUser);
