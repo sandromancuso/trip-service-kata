@@ -20,14 +20,12 @@ public class TripServiceTest {
   private static final User ANOTHER_USER = new User();
   private static final Trip TO_USA = new Trip();
   private static final Trip TO_TAIWAN = new Trip();
-  private User loggedUser;
   
   private TripService tripService;
 
   @BeforeEach
   void beforeEach() {
     tripService = new TestableTripService();
-    loggedUser = REGISTERED_USER;
     
   }
   
@@ -35,12 +33,9 @@ public class TripServiceTest {
   @DisplayName("使用者未登入丟出例外")
   void should_throw_exception_when_user_is_not_logged_in() throws Exception {
     
-    loggedUser = GUEST;
-    
-    // act
     //assert
     assertThatExceptionOfType(UserNotLoggedInException.class)
-      .isThrownBy(() -> tripService.getTripsByUser(UNUSED_USER));
+      .isThrownBy(() -> tripService.getTripsByUser(UNUSED_USER, GUEST));
     
   }
   
@@ -52,7 +47,7 @@ public class TripServiceTest {
     friend.addFriend(ANOTHER_USER);
     friend.addTrip(TO_USA);
     
-    List<Trip> trips = tripService.getTripsByUser(friend);
+    List<Trip> trips = tripService.getTripsByUser(friend, REGISTERED_USER);
     
     assertThat(trips.size()).isEqualTo(0);
     
@@ -64,21 +59,16 @@ public class TripServiceTest {
     // arrange
     User friend = new User();
     friend.addFriend(ANOTHER_USER);
-    friend.addFriend(loggedUser);
+    friend.addFriend(REGISTERED_USER);
     friend.addTrip(TO_USA);
     friend.addTrip(TO_TAIWAN);
     
-    List<Trip> trips = tripService.getTripsByUser(friend);
+    List<Trip> trips = tripService.getTripsByUser(friend, REGISTERED_USER);
     
     assertThat(trips.size()).isEqualTo(2);
   }
   
   private class TestableTripService extends TripService {
-
-    @Override
-    protected User getLoggedUser() {
-      return loggedUser;
-    }
 
     @Override
     protected List<Trip> tripsBy(User user) {
