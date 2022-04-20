@@ -2,7 +2,7 @@ package org.craftedsw.tripservicekata.user;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.function.IntPredicate;
 import org.craftedsw.tripservicekata.trip.Trip;
 
 public class User {
@@ -25,5 +25,9 @@ public class User {
 	public List<Trip> trips() {
 		return trips;
 	}
+
+  public boolean isFriendsWith(User user) {
+    return false;
+  }
 
 }
