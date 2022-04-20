@@ -42,7 +42,7 @@ public class TripServiceTest {
     
     //assert
     assertThatExceptionOfType(UserNotLoggedInException.class)
-      .isThrownBy(() -> tripService.getTripsByUser(UNUSED_USER, GUEST));
+      .isThrownBy(() -> tripService.getFriendTrips(UNUSED_USER, GUEST));
     
   }
   
@@ -54,7 +54,7 @@ public class TripServiceTest {
     friend.addFriend(ANOTHER_USER);
     friend.addTrip(TO_USA);
     
-    List<Trip> trips = tripService.getTripsByUser(friend, REGISTERED_USER);
+    List<Trip> trips = tripService.getFriendTrips(friend, REGISTERED_USER);
     
     assertThat(trips.size()).isEqualTo(0);
     
@@ -72,7 +72,7 @@ public class TripServiceTest {
     
     when(tripDAO.tripsBy(friend)).thenReturn(friend.trips());
     
-    List<Trip> trips = tripService.getTripsByUser(friend, REGISTERED_USER);
+    List<Trip> trips = tripService.getFriendTrips(friend, REGISTERED_USER);
     
     assertThat(trips.size()).isEqualTo(2);
   }
