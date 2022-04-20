@@ -16,7 +16,11 @@ public class TripService {
 
     return user.isFriendsWith(getLoggedUser()) 
         ? tripsBy(user) 
-        : new ArrayList<Trip>();
+        : noTrips();
+  }
+
+  private ArrayList<Trip> noTrips() {
+    return new ArrayList<Trip>();
   }
 
   protected List<Trip> tripsBy(User user) {
