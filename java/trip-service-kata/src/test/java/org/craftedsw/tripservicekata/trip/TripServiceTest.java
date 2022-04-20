@@ -52,6 +52,22 @@ public class TripServiceTest {
     
   }
   
+  @Test
+  @DisplayName("如果是朋友，就可看其旅遊行程")
+  void return_trips_when_users_are_friends() throws Exception {
+    // arrange
+    TripService tripService = new TestableTripService();
+    
+    loggedUser = REGISTERED_USER;
+    User friend = new User();
+    friend.addFriend(loggedUser);
+    friend.addTrip(TO_USA);
+    
+    List<Trip> trips = tripService.getTripsByUser(friend);
+    
+    assertThat(trips.size()).isEqualTo(1);
+  }
+  
   private class TestableTripService extends TripService {
 
     @Override
