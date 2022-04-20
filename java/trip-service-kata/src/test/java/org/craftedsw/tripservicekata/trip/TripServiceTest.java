@@ -18,6 +18,7 @@ public class TripServiceTest {
   private static final User REGISTERED_USER = new User();
   private static final User ANOTHER_USER = new User();
   private static final Trip TO_USA = new Trip();
+  private static final Trip TO_TAIWAN = new Trip();
   private User loggedUser;
 
   @Test
@@ -60,12 +61,14 @@ public class TripServiceTest {
     
     loggedUser = REGISTERED_USER;
     User friend = new User();
+    friend.addFriend(ANOTHER_USER);
     friend.addFriend(loggedUser);
     friend.addTrip(TO_USA);
+    friend.addTrip(TO_TAIWAN);
     
     List<Trip> trips = tripService.getTripsByUser(friend);
     
-    assertThat(trips.size()).isEqualTo(1);
+    assertThat(trips.size()).isEqualTo(2);
   }
   
   private class TestableTripService extends TripService {
@@ -74,6 +77,10 @@ public class TripServiceTest {
     protected User getLoggedUser() {
       return loggedUser;
     }
-    
+
+    @Override
+    protected List<Trip> tripsBy(User user) {
+      return user.trips();
+    }
   }
 }
