@@ -2,6 +2,7 @@ package org.craftedsw.tripservicekata.trip;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
+import static org.mockito.Mockito.when;
 
 import java.util.List;
 import org.craftedsw.tripservicekata.exception.UserNotLoggedInException;
@@ -33,15 +34,7 @@ public class TripServiceTest {
   
   @InjectMocks 
   @Spy
-  private TripService realTripService = new TripService();
-  
-  private TripService tripService;
-
-  @BeforeEach
-  void beforeEach() {
-    tripService = new TestableTripService();
-    
-  }
+  private TripService tripService = new TripService();
   
   @Test
   @DisplayName("使用者未登入丟出例外")
@@ -77,16 +70,11 @@ public class TripServiceTest {
     friend.addTrip(TO_USA);
     friend.addTrip(TO_TAIWAN);
     
+    when(tripDAO.tripsBy(friend)).thenReturn(friend.trips());
+    
     List<Trip> trips = tripService.getTripsByUser(friend, REGISTERED_USER);
     
     assertThat(trips.size()).isEqualTo(2);
   }
   
-  private class TestableTripService extends TripService {
-
-    @Override
-    protected List<Trip> tripsBy(User user) {
-      return user.trips();
-    }
-  }
 }
