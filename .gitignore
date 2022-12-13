@@ -14,6 +14,7 @@ _ReSharper.*/
 *.suo
 *.user
 _NCrunch_*/
+*.ncrunch*
 
 # Python Ignores
 *.pyc
