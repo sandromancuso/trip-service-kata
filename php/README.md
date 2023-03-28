@@ -15,12 +15,6 @@ php bin/phpunit
 ## Coverage
 
 When running the tests a coverage report should be generated automatically in simple text format and html report.
-
-If you want to visualize it from the browser you can open
-
-    open coverage/report/index.html
-
-in a browser after running the tests.
+If you want to visualize it from the browser you can open `coverage/report/index.html` file in a browser after running the tests.
 
 Enjoy
-
