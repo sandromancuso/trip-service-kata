@@ -35,4 +35,10 @@ Imagine a social networking website for travellers:
 - We CANNOT introduce state in the TripService
     - TripService is stateless. Introducing state may cause multi-thread issues
 
+## Problem to solve
+Unit tests for TripService must not call the real UserSession and TripDAO. It should solely focus on the TripService. The real classes have dependencies on resources (HTTP session, database) that are not available at unit test level. Unit tests will break if involving the real collaborators.
+
+![image](https://user-images.githubusercontent.com/6353105/232825748-52649c10-eb15-40c2-bdf7-3cb42874980e.png)
+
+
 [Extracted rules from here](https://miro.com/app/board/uXjVOanLakQ=/)
