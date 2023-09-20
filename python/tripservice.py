@@ -34,17 +34,17 @@ class User:
 #
 def _isUserLoggedIn(user):
   raise DependendClassCallDuringUnitTestException(
-    "UserSession.isUserLoggedIn() should not be called in an unit test"
+    "_isUserLoggedIn() should not be called in an unit test"
   )
 
 def _getLoggedUser():
   raise DependendClassCallDuringUnitTestException(
-    "UserSession.getLoggedUser() should not be called in an unit test"
+    "_getLoggedUser() should not be called in an unit test"
   )
 
 def _findTripsByUser(user):
   raise DependendClassCallDuringUnitTestException(
-    "TripDAO should not be invoked on an unit test."
+    "_findTripsByUser() should not be invoked on an unit test."
   )
 
 def getTripsByUser(user):
