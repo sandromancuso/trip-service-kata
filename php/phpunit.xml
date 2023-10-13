@@ -14,7 +14,7 @@
 
     <testsuites>
         <testsuite name="TripService Kata Test Suite">
-            <directory>test/</directory>
+            <directory suffix="Should.php">test/</directory>
         </testsuite>
     </testsuites>
 
