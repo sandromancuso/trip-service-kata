@@ -5,20 +5,20 @@ namespace Test\TripServiceKata\Trip;
 use PHPUnit\Framework\TestCase;
 use TripServiceKata\Trip\TripService;
 
-class TripServiceTest extends TestCase
+class TripServiceShould extends TestCase
 {
     /**
      * @var TripService
      */
-    private $tripService;
+    private TripService $tripService;
 
-    protected function setUp()
+    protected function setUp(): void
     {
-        $this->tripService = new TripService;
+        $this->tripService = new TripService();
     }
 
     /** @test */
-    public function it_does_something()
+    public function do_something()
     {
         $this->fail('This test has not been implemented yet.');
     }
