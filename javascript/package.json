@@ -20,7 +20,7 @@
   "homepage": "https://github.com/sandromancuso/trip-service-kata",
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "mocha": "^2.3.4",
+    "mocha": "^10.2.0",
     "sinon": "^1.17.2"
   }
 }
