@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "pretest": "npm run lint"
+    "pretest": "npm run lint",
+    "watch": "jest --watchAll"
   },
   "author": "Daniel Perez <danipq26@gmail.com>",
   "devDependencies": {
