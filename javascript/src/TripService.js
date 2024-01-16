@@ -12,7 +12,7 @@ class TripService {
             let friends = user.getFriends();
             for (let i = 0; i < friends.length; i++) {
                 let friend = friends[i];
-                if (friend == loggedUser) {
+                if (friend === loggedUser) {
                     isFriend = true;
                     break;
                 }
