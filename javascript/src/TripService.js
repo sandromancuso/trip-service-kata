@@ -10,13 +10,13 @@ class TripService {
         let isFriend = false;
         if (loggedUser != null) {
             let friends = user.getFriends();
-            for (let i=0; i < friends.length; i++) {
+            for (let i = 0; i < friends.length; i++) {
                 let friend = friends[i];
                 if (friend == loggedUser) {
                     isFriend = true;
                     break;
                 }
-            };
+            }
             if (isFriend) {
                 tripList = TripDAO.findTripsByUser(user);
             }
