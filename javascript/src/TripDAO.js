@@ -7,4 +7,4 @@ class TripDAO {
     }
 }
 
-module.exports = TripDAO
+module.exports = TripDAO;
