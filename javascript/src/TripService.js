@@ -27,4 +27,4 @@ class TripService {
     }
 }
 
-module.exports = TripService
+module.exports = TripService;
