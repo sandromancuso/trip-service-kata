@@ -3,4 +3,4 @@
 class Trip {
 }
 
-module.exports = Trip
+module.exports = Trip;

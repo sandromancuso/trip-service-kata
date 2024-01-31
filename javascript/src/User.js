@@ -11,4 +11,4 @@ class User {
 	addTrip = (newTrip) => this.trips.push(newTrip);
 }
 
-module.exports = User
+module.exports = User;
