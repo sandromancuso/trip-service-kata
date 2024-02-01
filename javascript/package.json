@@ -4,7 +4,8 @@
   "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
   "scripts": {
     "test": "mocha",
-    "coverage": "istanbul cover _mocha"
+    "coverage": "istanbul cover _mocha",
+    "watch": "mocha --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   "homepage": "https://github.com/sandromancuso/trip-service-kata",
   "devDependencies": {
     "istanbul": "^0.4.5",
-    "mocha": "^2.3.4",
-    "sinon": "^1.17.2"
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.1"
   }
 }
