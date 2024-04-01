@@ -10,7 +10,7 @@ class TripServiceTest extends TestCase
     /**
      * @var TripService
      */
-    private $tripService;
+    private TripService $tripService;
 
     protected function setUp(): void
     {

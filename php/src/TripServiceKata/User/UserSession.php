@@ -6,15 +6,9 @@ use TripServiceKata\Exception\DependentClassCalledDuringUnitTestException;
 
 class UserSession
 {
-    /**
-     * @var UserSession
-     */
-    private static $userSession;
+    private static UserSession $userSession;
 
-    /**
-     * @return UserSession
-     */
-    public static function getInstance()
+    public static function getInstance(): UserSession
     {
         if (null === static::$userSession) {
             static::$userSession = new UserSession();
