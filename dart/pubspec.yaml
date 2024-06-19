@@ -1,0 +1,13 @@
+name: trip_service
+description: A sample command-line application.
+version: 1.0.0
+repository: https://github.com/sandromancuso/trip-service-kata
+
+environment:
+  sdk: ^3.2.5
+
+dependencies:
+
+dev_dependencies:
+  lints: ^2.1.0
+  test: ^1.24.0
