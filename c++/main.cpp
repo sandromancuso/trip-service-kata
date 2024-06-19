@@ -1,11 +1,13 @@
 #include "TripService/TripService.h"
 #include "TripService/User.h"
+#include <gtest/gtest.h>
 
-int main()
+TEST(TripServiceShould, do_something)
 {
-    TripService* service;
-
-    service->BuildCheck();
-
-    return 0;
+    auto *tripService = new TripService();
+    try {
+        tripService->GetTripsByUser(nullptr);
+    } catch (const char * exception) {
+        FAIL() << exception;
+    }
 }
