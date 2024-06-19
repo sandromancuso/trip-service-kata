@@ -10,9 +10,9 @@ class TripServiceTest extends TestCase
     /**
      * @var TripService
      */
-    private $tripService;
+    private TripService $tripService;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tripService = new TripService;
     }

@@ -1,12 +1,17 @@
 {
     "name": "sandromancuso/trip-service-kata",
     "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
+    "type": "project",
+    "keywords": ["TripService", "kata"],
+    "require": {
+        "php": ">=8.3"
+    },
     "require-dev": {
-        "php": "^7.0",
-        "phpunit/phpunit": "^6.5"
+        "phpunit/phpunit": "^10.3"
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "./vendor/bin/phpunit",
+        "test-coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html coverage"
     },
     "authors": [
         {
