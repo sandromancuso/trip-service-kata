@@ -1,12 +1,13 @@
-"use strict";
+"use strict"
 
-let assert = require('assert');
-let TripService = require('../src/TripService');
+import chai from 'chai'
+import TripService from '../src/TripService.js'
+const {expect} = chai
 
 describe('TripService', () => {
 
     it('should... ', () => {
-        assert.equal(2+2, 5);
-    });
+        expect(2+2).to.equal(5)
+    })
 
-});
+})

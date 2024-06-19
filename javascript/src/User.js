@@ -1,5 +1,11 @@
-"use strict";
+"use strict"
 
-module.exports = class User {
+export default class User {
+    constructor(friends = []) {
+        this.friends = friends
+    }
 
+    getFriends() {
+        return this.friends
+    }
 }
