@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Kata for a legacy code hands-on session. The objective is to write tests and refactor the given legacy code.",
   "scripts": {
-    "test:report": "vitest --coverage --reporter=html",
-    "test": "vitest --coverage"
+    "test": "vitest --coverage --ui"
   },
   "repository": {
     "type": "git",
