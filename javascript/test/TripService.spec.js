@@ -1,13 +1,9 @@
-"use strict"
+"use strict";
+import TripService from "../src/TripService.js";
+import { describe, expect, test } from "vitest";
 
-import chai from 'chai'
-import TripService from '../src/TripService.js'
-const {expect} = chai
-
-describe('TripService', () => {
-
-    it('should... ', () => {
-        expect(2+2).to.equal(5)
-    })
-
-})
+describe("TripService", () => {
+  test("should... ", () => {
+    expect(2 + 2).to.equal(5);
+  });
+});
